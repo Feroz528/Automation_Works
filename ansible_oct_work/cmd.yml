@@ -1,0 +1,25 @@
+---
+- hosts: all
+  serial: 1
+  #strategy: free
+  user: root_EB
+  become: yes
+  become_method: sudo
+  gather_facts: false
+  tasks:
+   - command: cat /etc/os-release
+     register: os
+     tags: os1
+   - debug: var=os.stdout_lines
+     tags: os2
+   - command: cat /etc/redhat-release
+     register: rh
+     tags: rh1
+   - debug:
+       msg: "{{ rh.stdout_lines }}"
+     tags: rh2
+       #msg: "{{ u.stdout_lines }}"
+       #msg: "{{ ansible_play_hosts | map('extract', hostvars, 'u') | map(attribute='stdout') | list }}"
+     #run_once: yes
+
+  
