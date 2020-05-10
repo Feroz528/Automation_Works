@@ -1,0 +1,8 @@
+---
+- hosts: node1
+  user: root
+  become: yes
+  gather_facts: no
+  roles:
+    - { role: ibm_roles/ibm_imv185_install }
+    - { role: ibm_roles/ibm_wasndv85_install }

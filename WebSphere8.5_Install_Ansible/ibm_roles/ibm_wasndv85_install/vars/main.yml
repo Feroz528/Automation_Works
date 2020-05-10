@@ -1,0 +1,12 @@
+---
+
+_temp_dir: "/tmp/wasnd85"
+
+_wasnd_files:
+ - { wasnd_pkg: WASND_v8.5.5_1of3.zip }
+ - { wasnd_pkg: WASND_v8.5.5_2of3.zip }
+ - { wasnd_pkg: WASND_v8.5.5_3of3.zip }
+
+_ibm_iim_path: "{{ ibm_im_path | default('/opt/IBM/InstallationManager/eclipse') }}"
+
+resp_file: wasnd85_rsp.xml.j2

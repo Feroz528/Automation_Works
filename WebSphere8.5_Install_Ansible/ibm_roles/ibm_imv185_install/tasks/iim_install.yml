@@ -1,0 +1,23 @@
+---
+- name: CREATING A TEMP DIRECTORY
+  file: path="{{ _temp_dir }}"
+        state=directory
+        mode=0755
+
+- name: UNZIPPING IIM PACKAGE
+  unarchive: src="{{ item.iim_pkg }}"
+             dest="{{ _temp_dir }}"
+  with_items: "{{ _iim_pkg  }}"
+  tags: unzip
+
+- name: INSTALLING IIM PACKAGE
+  command: "{{ _temp_dir }}/installc -acceptLicense -aR admin"
+  register: iim_install
+- debug: var=iim_install.stdout_lines
+  
+- name: VERIFYING THE INSTALLATION
+  command: "{{ _iim_installed_path }}/tools/imcl -version"
+  register: iim_version
+- debug: var=iim_version.stdout_lines
+
+

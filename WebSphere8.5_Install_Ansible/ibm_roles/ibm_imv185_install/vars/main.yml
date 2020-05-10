@@ -1,0 +1,8 @@
+---
+
+_temp_dir: "/tmp/iim"
+
+_iim_pkg:
+   - { iim_pkg: agent.installer.lnx.gtk.x86_64_1.8.5.zip }
+
+_iim_installed_path: "{{ iim_installed_path  |default('/opt/IBM/InstallationManager/eclipse') }}"

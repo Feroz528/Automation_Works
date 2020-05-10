@@ -1,0 +1,10 @@
+--> This Playbook is to install IBM WebSphere.
+
+--> Tested On RedHat7/CentOS7
+
+--> First download the WebSphere Packages and Installation manager packages,
+    Put downloaded packages in roles files section,
+    Make necessary changes in roles variables section and done.
+
+
+    

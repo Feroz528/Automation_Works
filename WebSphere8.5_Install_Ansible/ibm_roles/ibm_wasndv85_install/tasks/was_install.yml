@@ -1,0 +1,21 @@
+---
+- name: CREATING TEMP DIRECTORY
+  file: path="{{ _temp_dir }}"
+        state=directory
+        mode=0755
+
+- name: UNZIPPING WAS ND PACKAGES
+  unarchive:  src="{{ item.wasnd_pkg }}"
+              dest="{{ _temp_dir }}"
+  with_items: "{{ _wasnd_files }}"
+  tags: unzip
+
+- name: MOVING RESPONSE FILE
+  template: src="{{ resp_file }}"
+            dest="{{ _temp_dir }}"
+- name: INSTALLING WASNDv85
+  command: "{{ _ibm_iim_path }}/tools/imcl input {{ _temp_dir }}/{{ resp_file }} -acceptLicense -aR admin -silent -sP"
+  register: was_install
+- debug: var=was_install.stdout_lines
+
+
