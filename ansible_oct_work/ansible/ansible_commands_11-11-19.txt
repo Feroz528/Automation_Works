@@ -1,0 +1,152 @@
+  284  ansible-playbook kern.yml -i .hostlist/sites
+  285  ansible-playbook kern.yml -i .hostlist/sites >> remote_kernal
+  327  cd ansible/
+  422  ansible all -i localhost, -m debug -a "msg={{ 'mypassword' | password_hash('sha512', 'mysecretsalt') }}"
+  426  ansible-vault --help
+  427  ansible-vault -h
+  439  cd ansible/
+  441  ansible -i .hostlist/sites -a "tailf /install/IBM/HTTPServer/conf/httpd.conf"
+  442  ansible -i .hostlist/sites -a "tailf /install/IBM/HTTPServer/conf/httpd.conf" all
+  443  ansible -i .hostlist/sites -a "tailf /install/IBM/HTTPServer/conf/httpd.conf" --limit netra
+  444  ansible -i .hostlist/sites --limit netra -a "tailf /install/IBM/HTTPServer/conf/httpd.conf"
+  448  ansible-playbook http_conf.yml -i .hostlist/sites 
+  449  ansible-playbook http_conf.yml -i .hostlist/sites >> apm_conf_res
+  470  ansible-playbook kern.yml -i .hostlist/sites --limit netra
+  474  ansible-playbook http_conf.yml -i .hostlist/sites >> new_apm_res
+  477  ansible-playbook httprestart.yml -i .hostlist/sites 
+  479  ansible-playbook httprestart.yml -i .hostlist/sites --syntax-check
+  480  ansible-playbook httprestart.yml -i .hostlist/sites
+  493  ansible-vault edit vars/main.yml 
+  497  ansible-playbook status.yml -i sites --list-hosts
+  498  ansible-playbook status.yml -i sites --ask-vault-pass --list-hosts 
+  499  ansible-playbook status.yml -i sites --ask-vault-pass --limit bongaigaon
+  500  ansible -i sites -a "date" all
+  501  ansible -i sites -a "date" --limit netra
+  502  ansible -i sites -a "date" all --limit netra
+  503  ansible -i sites -a "date" all --limit netra,korba
+  504  ansible-playbook status.yml -i sites --ask-vault-pass --list-hosts
+  506  ansible-playbook status.yml -i sites --ask-vault-pass --limit kodgi,rihand
+  508  ansible-playbook status.yml -i sites --ask-vault-pass --limit kodgi,rihand
+  509  ansible-playbook status.yml -i sites --ask-vault-pass --list-hosts
+  510  ansible-playbook status.yml -i sites --ask-vault-pass --limit sipat,ramagundam,dadri
+  511  ansible-playbook status.yml -i sites --ask-vault-pass --list-hosts
+  512  ansible-playbook status.yml -i sites --ask-vault-pass --limit korba
+  514  ansible-playbook status.yml -i sites --ask-vault-pass --list-hosts
+  515  ansible-playbook status.yml -i sites --ask-vault-pass --limit singruali,solapur,mouda,unchar,khalegaon
+  525  cd ansible/
+  538  cd ansible/
+  551  ansible-playbook status.yml -i sites --limit scope,talcher,tanda
+  552  ansible-playbook status.yml -i sites --limit scope,talcher,tanda --ask-vault-pass
+  553  ansible-playbook status.yml -i sites --limit --ask-vault-pass --list-hosts
+  554  ansible-playbook status.yml -i sites --ask-vault-pass --list-hosts
+  555  ansible-playbook status.yml -i sites --limit vindhyachal,faridabad,frrka,simhadri --ask-vault-pass
+  557  vi /etc/ansible/ansible.cfg 
+  558  ansible -a "date"
+  559  ansible -h localhost -a "date"
+  560  ansible -a date
+  598  cd ansible/
+  685  cd ansible/
+  881  cd ansible
+  890  ansible-playbook -i ../.hostlist/sites all-app-disk-mem-up.yml 
+  891  ansible-playbook -i ../.hostlist/sites all-app-disk-mem-up.yml --ask-vault-pass
+  964  cd ansible/
+ 1006  cd ansible/
+ 1025  ansible .hostlist/sites all -m shell -a "dmidecode -t system |grep Serial"
+ 1026  ansible -b .hostlist/sites all -m shell -a "dmidecode -t system |grep Serial"
+ 1027  ansible  .hostlist/sites all -u root_EB -b -m shell -a "dmidecode -t system |grep Serial"
+ 1028  ansible  .hostlist/sites all -u root_EB --become -m shell -a "dmidecode -t system |grep Serial"
+ 1029  ansible  .hostlist/sites all -m shell -a "dmidecode -t system |grep Serial" --become
+ 1030  ansible  .hostlist/sites -m shell -a "dmidecode -t system | grep Serial" all -u root_EB --become
+ 1031  ansible  .hostlist/sites -m shell -a "sudo dmidecode -t system | grep Serial"
+ 1032  ansible  .hostlist/sites all -m shell -a "sudo dmidecode -t system | grep Serial"
+ 1033  ansible  .hostlist/sites -m shell -a "sudo dmidecode -t system | grep Serial" all
+ 1034  ansible  .hostlist/sites "sudo dmidecode -t system | grep Serial" all
+ 1035  ansible  .hostlist/sites "dmidecode -t system | grep Serial" all
+ 1036  ansible  .hostlist/sites all -m shell -a 'dmidecode -t system | grep Serial' --become
+ 1037  ansible  .hostlist/sites all -m shell -a 'free -g| grep -i mem' --become
+ 1038  ansible  .hostlist/sites all 'free -g' --become
+ 1039  ansible  .hostlist/sites all -a 'free -g' --become
+ 1040  ansible  .hostlist/sites all -a "free -g" -u root_EB --become
+ 1041  ansible  .hostlist/sites all -m ping
+ 1042  ansible  .hostlist/sites -m ping
+ 1043  ansible  .hostlist/sites -m ping all
+ 1044  ansible  -i .hostlist/sites -m ping all
+ 1045  ansible  -i .hostlist/sites all -m shell -a 'dmidecode -t system | grep Serial' --become
+ 1049  ansible -m ping -i .hostlist/sites --limit unchar
+ 1050  ansible -m ping -i .hostlist/sites all  --limit unchar
+ 1051  ansible -m ping -i .hostlist/sites --limit unchar
+ 1052  ansible -m ping -i .hostlist/sites --limit 'unchar:!all'
+ 1053  ansible -m ping -i .hostlist/sites --limit '!all:unchar'
+ 1054  ansible -m ping -i .hostlist/sites --limit 'all:unchar'
+ 1055  ansible -m ping -i .hostlist/sites --limit 'all:!unchar'
+ 1056  ansible -m ping -i .hostlist/sites --limit unchar
+ 1057  ansible -m ping -i .hostlist/sites unchar
+ 1058  ansible -m ping -i .hostlist/sites --list-hosts
+ 1059  ansible -i .hostlist/sites --list-hosts
+ 1060  ansible -i .hostlist/sites all --list-hosts
+ 1062  ansible  -i .hostlist/sites all -m shell -a 'dmidecode -t system | grep Serial' --become
+ 1063  ansible  -i .hostlist/sites all -m shell -a "dmidecode -t system | grep Serial" --become
+ 1067  ansible-playbook -i .hostlist/sites --limit netra
+ 1069  ansible-playbook -i .hostlist/sites hardware.yml --limit netra
+ 1071  ansible-playbook -i .hostlist/sites hardware.yml --limit netra
+ 1083  cd ansible/
+ 1086  sudo vi /etc/ansible/hosts 
+ 1087  ansible-playbook user.yml 
+ 1088  ansible-playbook user.yml --aks-become-pass
+ 1089  ansible-playbook user.yml --ask-pass
+ 1092  ansible-playbook user.yml --ask-pass
+ 1094  sudo vi /etc/ansible/hosts 
+ 1098  sudo vi /etc/ansible/hosts 
+ 1100  ansible-playbook user.yml --ask-pass
+ 1117  ls -ltr |grep -i ansible
+ 1121  cd ansible/
+ 1127  ansible-pl dev_n_test_check.yml 
+ 1128  ansible-playbook dev_n_test_check.yml 
+ 1131  ansible-playbook -i ../.hostlist/sites dev_n_test_check.yml 
+ 1132  ansible-playbook -i ../.hostlist/dev_test dev_n_test_check.yml 
+ 1134  ansible-i ../.hostlist/dev_test -m ping ecmtestapp
+ 1135  ansible -i ../.hostlist/dev_test -m ping ecmtestapp
+ 1136  ansible-playbook -i ../.hostlist/dev_test dev_n_test_check.yml --limit ecmtestapp
+ 1139  ansible-playbook -i ../.hostlist/dev_test dev_n_test_check.yml --limit ecmtestapp
+ 1140  ansible-playbook -i ../.hostlist/dev_test dev_n_test_check.yml --limit ecmtestapp --ask-pass
+ 1141  ansible -i ../.hostlist/dev_test "df -g" ecmtestapp
+ 1142  ansible -i ../.hostlist/dev_test -a "df -g" ecmtestapp
+ 1144  ansible -i ../.hostlist/dev_test -a "svmon -O unit=GB" ecmtestapp
+ 1145  ansible -i ../.hostlist/dev_test -a "df -g" ecmtestapp
+ 1146  ansible -i ../.hostlist/dev_test -a "df -g" ecmtestapp --become
+ 1170  cd ansible/
+ 1182  ansible-playbook bpm_prd_.yml --tags df1,df2
+ 1183  ansible-playbook ../.hostlist/bpm_prod bpm_prd_.yml --tags df1,df2
+ 1184  ansible-playbook ../.hostlist/bpm_prod bpm_prd_.yml --tags df1
+ 1186  ansible-playbook ../.hostlist/bpm_prod bpm_prd_.yml --tags df1,df2
+ 1194  ansible -i .hostlist/bpm_prod "df -g" 
+ 1195  ansible -i .hostlist/bpm_prod "df -g" --become
+ 1196  ansible -i .hostlist/bpm_prod  all "df -g" --become
+ 1197  ansible -i .hostlist/bpm_prod -a "df -g" --become
+ 1198  ansible -i .hostlist/bpm_prod -a "df -g" --become all
+ 1199  ansible -i .hostlist/bpm_prod -a "df -g" --become all >> BPM_PRD_$(date +'%d-%m-%y'.txt)
+ 1202  ansible -i .hostlist/dev_test -a "df -g" --become ecmtestapp >> BPM_PRD_$(date +'%d-%m-%y'.txt)
+ 1203  ansible -i .hostlist/dev_test -a "df -g" --become bpmtestapp >> BPM_PRD_$(date +'%d-%m-%y'.txt)
+ 1205  ansible -i .hostlist/bpm_prod -m shell -a "df -g |grep -i /install" --become all
+ 1208  ansible -i .hostlist/bpm_prod -m shell -a "df -g |grep -i /install" --become all
+ 1209  ansible -i .hostlist/dev_test -a "df -g" --become bpmtestapp
+ 1211  ansible -i .hostlist/bpm_prod -m shell -a "df -g |grep -i /install" --become all
+ 1216  ansible -i .hostlist/bpm_prod -m shell -a "df -g |grep -i /install" --become all
+ 1218  ansible -i .hostlist/sites -m shell -a "df -h |egrep -i '/var | /install'" --become all
+ 1219  ansible -i .hostlist/sites -m shell -a "df -h |egrep -i '/install|/var'" --become all
+ 1220  ansible -i .hostlist/ecm_prod -m shell -a "df -g |egrep -i '/install|/var'" --become all
+ 1221  ansible -i .hostlist/dev_test -m shell -a "df -g |egrep -i '/install|/var'" --become all
+ 1222  ansible -i .hostlist/dev_test -m shell -a "df -g |egrep -i '/install||/var'" --become all
+ 1223  ansible -i .hostlist/dev_test -m shell -a "df -g |egrep -i '/install|/applogs'" --become all
+ 1225  ansible -i .hostlist/bpm_prod -m shell -a "df -g |grep -i /install" --become all
+ 1227  cd ansible/
+ 1233  ansible -i .hostlist/bpm_prod  -a "hostname" all
+ 1234  ansible -i .hostlist/ecm_prod  -a "hostname" all
+ 1235  ansible -i .hostlist/bpm_prod  -a "hostname" all
+ 1241  ansible -i ansible/.hostlist/d  -a "hostname" all
+ 1242  ansible -i ansible/.hostlist/dev_test  -a "hostname" all
+ 1243  ansible -i ansible/.hostlist/sites  -a "hostname" all
+ 1247  ansible -i ansible/.hostlist/bpm_prod -m shell -a "df -g |grep -i /install" all
+ 1249  ansible -i ansible/.hostlist/bpm_prod -m shell -a "df -g |grep -i /install" all
+ 1251  history |grep -i ansible
+ 1252  history |grep -i ansible >> ansible_commands_$(date +'%d-%m-%y').txt

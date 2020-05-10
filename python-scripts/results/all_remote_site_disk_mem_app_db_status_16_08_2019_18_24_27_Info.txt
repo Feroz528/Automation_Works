@@ -1,0 +1,594 @@
+
+PLAY [all] *************************************************************************************************************************************************************
+
+TASK [site-disk-role : mounts points of host] **************************************************************************************************************************
+changed: [netra]
+changed: [faridabad]
+changed: [scope]
+changed: [sipat]
+changed: [ramagundam]
+changed: [singruali]
+changed: [bongaigaon]
+changed: [solapur]
+changed: [rihand]
+changed: [korba]
+changed: [frrka]
+changed: [kodgi]
+changed: [khalegaon]
+changed: [barh]
+changed: [talcher]
+changed: [dadri]
+changed: [mouda]
+changed: [unchar]
+changed: [vindhyachal]
+changed: [simhadri]
+fatal: [tanda]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host tanda port 22: Connection timed out\r\n", "unreachable": true}
+
+TASK [site-disk-role : debug] ******************************************************************************************************************************************
+ok: [faridabad] => {
+    "v2.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs       100G  9.2G   91G  10% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   92K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.0G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/sda1                                       xfs       2.0G  132M  1.9G   7% /boot", 
+        "/dev/mapper/Datavg-badarpurcacheArea            xfs       750G   37G  713G   5% /badarpur/cacheArea", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/Datavg-install                      xfs       200G   77G  124G  39% /install", 
+        "/dev/mapper/rootvg-home                         xfs        20G   37M   20G   1% /home", 
+        "/dev/mapper/rootvg-tmp                          xfs        20G  105M   20G   1% /tmp", 
+        "/dev/mapper/rootvg-var                          xfs        20G  8.5G   12G  43% /var", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   78G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.0T   11T  17% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T   97G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1"
+    ]
+}
+ok: [netra] => {
+    "v2.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs        94G  8.1G   85G   9% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   92K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.1G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/sda1                                       xfs       1.9G  126M  1.8G   7% /boot", 
+        "/dev/mapper/Datavg-netracacheArea               xfs       750G  206M  750G   1% /netra/cacheArea", 
+        "/dev/mapper/Datavg-install                      xfs       200G  115G   86G  58% /install", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/rootvg-tmp                          xfs        19G   94M   19G   1% /tmp", 
+        "/dev/mapper/rootvg-var                          xfs        19G  6.3G   13G  34% /var", 
+        "/dev/mapper/rootvg-home                         xfs        19G  1.1G   18G   6% /home", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T   97G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.0T   11T  17% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   78G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1"
+    ]
+}
+ok: [sipat] => {
+    "v2.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs        94G  9.4G   84G  11% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   92K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  442M   63G   1% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/mapper/Datavg-sipatcacheArea               xfs       750G   76G  674G  11% /sipat/cacheArea", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/sda1                                       xfs       1.9G  133M  1.8G   7% /boot", 
+        "/dev/mapper/Datavg-install                      xfs       200G  105G   95G  53% /install", 
+        "/dev/mapper/rootvg-tmp                          xfs        19G  137M   19G   1% /tmp", 
+        "/dev/mapper/rootvg-home                         xfs        19G   37M   19G   1% /home", 
+        "/dev/mapper/rootvg-var                          xfs        19G  5.1G   14G  28% /var", 
+        "tmpfs                                           tmpfs      13G   12K   13G   1% /run/user/42", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T   97G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   78G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.0T   11T  17% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1", 
+        "tmpfs                                           tmpfs      13G     0   13G   0% /run/user/0", 
+        "tmpfs                                           tmpfs      13G     0   13G   0% /run/user/1005"
+    ]
+}
+ok: [ramagundam] => {
+    "v2.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs        94G   11G   83G  11% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G  148K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.1G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/mapper/Datavg-install                      xfs       200G  106G   95G  53% /install", 
+        "/dev/mapper/Datavg-ramagundamcacheArea          xfs       750G   31G  719G   5% /ramagundam/cacheArea", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/sda1                                       xfs       1.9G  132M  1.8G   7% /boot", 
+        "/dev/mapper/rootvg-home                         xfs        19G   33M   19G   1% /home", 
+        "/dev/mapper/rootvg-var                          xfs        19G   12G  7.4G  61% /var", 
+        "/dev/mapper/rootvg-tmp                          xfs        19G  113M   19G   1% /tmp", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T   97G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   78G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.0T   11T  17% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1"
+    ]
+}
+ok: [scope] => {
+    "v2.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         ext4       99G   11G   84G  11% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   92K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G   82M   63G   1% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/sda1                                       ext4      2.0G  105M  1.7G   6% /boot", 
+        "/dev/mapper/Datavg-scopecacheArea               xfs       750G   19G  731G   3% /scope/cacheArea", 
+        "/dev/mapper/Datavg-install                      xfs       200G   88G  113G  44% /install", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/rootvg-home                         ext4       20G  103M   19G   1% /home", 
+        "/dev/mapper/rootvg-tmp                          ext4       20G  118M   19G   1% /tmp", 
+        "/dev/mapper/rootvg-var                          ext4       20G  3.7G   15G  20% /var", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T   97G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   78G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.0T   11T  17% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1"
+    ]
+}
+ok: [singruali] => {
+    "v2.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs        94G  8.2G   85G   9% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G  100K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.1G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/sda1                                       xfs       1.9G  132M  1.8G   7% /boot", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/Datavg-install                      xfs       200G  107G   94G  54% /install", 
+        "/dev/mapper/Datavg-singraulicacheArea           xfs       750G  8.2G  742G   2% /singrauli/cacheArea", 
+        "/dev/mapper/rootvg-var                          xfs        19G  6.0G   13G  33% /var", 
+        "/dev/mapper/rootvg-home                         xfs        19G   64M   19G   1% /home", 
+        "/dev/mapper/rootvg-tmp                          xfs        19G  101M   19G   1% /tmp", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T   97G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.0T   11T  17% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   78G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs        12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1"
+    ]
+}
+ok: [rihand] => {
+    "v2.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs        94G   12G   82G  13% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   92K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.1G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/mapper/Datavg-rihandcacheArea              xfs       750G   15G  735G   2% /rihand/cacheArea", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/Datavg-install                      xfs       200G  102G   99G  51% /install", 
+        "/dev/sda1                                       xfs       1.9G  126M  1.8G   7% /boot", 
+        "/dev/mapper/rootvg-tmp                          xfs        19G   95M   19G   1% /tmp", 
+        "/dev/mapper/rootvg-home                         xfs        19G   37M   19G   1% /home", 
+        "/dev/mapper/rootvg-var                          xfs        19G  5.5G   14G  30% /var", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs        12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.0T   11T  17% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T   97G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   78G   12T   1% /ibm/fncss2/fncss2_fset1"
+    ]
+}
+ok: [bongaigaon] => {
+    "v2.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs       100G  8.4G   92G   9% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   92K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.0G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/mapper/Datavg-bongaigaoncacheArea          xfs       750G   15G  736G   2% /bongaigaon/cacheArea", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/sda1                                       xfs       2.0G  131M  1.9G   7% /boot", 
+        "/dev/mapper/Datavg-install                      xfs       200G   87G  114G  44% /install", 
+        "/dev/mapper/rootvg-var                          xfs        20G  9.9G   11G  50% /var", 
+        "/dev/mapper/rootvg-tmp                          xfs        20G  103M   20G   1% /tmp", 
+        "/dev/mapper/rootvg-home                         xfs        20G   33M   20G   1% /home", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   78G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.0T   11T  17% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T   97G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1", 
+        "tmpfs                                           tmpfs      13G   12K   13G   1% /run/user/42", 
+        "tmpfs                                           tmpfs      13G     0   13G   0% /run/user/0", 
+        "tmpfs                                           tmpfs      13G     0   13G   0% /run/user/1005"
+    ]
+}
+ok: [solapur] => {
+    "v2.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rhel-root                           xfs        94G  9.5G   84G  11% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   92K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.0G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/sda1                                       xfs       1.9G  132M  1.8G   7% /boot", 
+        "/dev/mapper/Datavg-install                      xfs       200G   92G  109G  46% /install", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/Datavg-solapurcacheArea             xfs       750G   19G  731G   3% /solapur/cacheArea", 
+        "/dev/mapper/rhel-tmp                            xfs        19G   96M   19G   1% /tmp", 
+        "/dev/mapper/rhel-home                           xfs        19G   34M   19G   1% /home", 
+        "/dev/mapper/rhel-var                            xfs        19G  7.8G   11G  42% /var", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.0T   11T  17% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   78G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T   97G   12T   1% /ibm/fncss1/fncss1_fset1"
+    ]
+}
+ok: [korba] => {
+    "v2.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs        94G  8.6G   85G  10% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   92K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.1G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/sda1                                       xfs       1.9G  133M  1.8G   7% /boot", 
+        "/dev/mapper/rootvg-var                          xfs        19G  6.3G   13G  34% /var", 
+        "/dev/mapper/rootvg-home                         xfs        19G   33M   19G   1% /home", 
+        "/dev/mapper/rootvg-tmp                          xfs        19G  101M   19G   1% /tmp", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/Datavg-install                      xfs       200G  105G   96G  53% /install", 
+        "/dev/mapper/Datavg-korbacacheArea               xfs       750G   34G  716G   5% /korba/cacheArea", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.0T   11T  17% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T   97G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   78G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "tmpfs                                           tmpfs      13G   12K   13G   1% /run/user/42", 
+        "tmpfs                                           tmpfs      13G     0   13G   0% /run/user/0", 
+        "tmpfs                                           tmpfs      13G     0   13G   0% /run/user/1005"
+    ]
+}
+ok: [simhadri] => {
+    "v2.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs        94G  8.4G   85G   9% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   92K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.1G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/sda1                                       xfs       1.9G  132M  1.8G   7% /boot", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/Datavg-simhadricacheArea            xfs       750G   77G  674G  11% /simhadri/cacheArea", 
+        "/dev/mapper/Datavg-install                      xfs       200G  103G   97G  52% /install", 
+        "/dev/mapper/rootvg-home                         xfs        19G   33M   19G   1% /home", 
+        "/dev/mapper/rootvg-var                          xfs        19G  7.7G   11G  41% /var", 
+        "/dev/mapper/rootvg-tmp                          xfs        19G  127M   19G   1% /tmp", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.0T   11T  17% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   78G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T   97G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "tmpfs                                           tmpfs      13G   12K   13G   1% /run/user/42", 
+        "tmpfs                                           tmpfs      13G     0   13G   0% /run/user/0", 
+        "tmpfs                                           tmpfs      13G     0   13G   0% /run/user/1005"
+    ]
+}
+ok: [khalegaon] => {
+    "v2.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs       100G  8.3G   92G   9% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   92K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  570M   63G   1% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/mapper/Datavg-KhstppcacheArea              xfs       750G   28G  723G   4% /Khstpp/cacheArea", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/Datavg-install                      xfs       200G  108G   93G  54% /install", 
+        "/dev/sda1                                       xfs       2.0G  133M  1.9G   7% /boot", 
+        "/dev/mapper/rootvg-tmp                          xfs        20G  103M   20G   1% /tmp", 
+        "/dev/mapper/rootvg-home                         xfs        20G   81M   20G   1% /home", 
+        "/dev/mapper/rootvg-var                          xfs        20G  5.7G   15G  29% /var", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.0T   11T  17% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T   97G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   78G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs        12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1", 
+        "tmpfs                                           tmpfs      13G   12K   13G   1% /run/user/42", 
+        "tmpfs                                           tmpfs      13G     0   13G   0% /run/user/0", 
+        "tmpfs                                           tmpfs      13G     0   13G   0% /run/user/1005"
+    ]
+}
+ok: [kodgi] => {
+    "v2.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root00                       xfs        94G  7.5G   86G   8% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   92K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.1G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/mapper/Datavg-install                      xfs       200G  101G   99G  51% /install", 
+        "/dev/mapper/Datavg-kudgicacheArea               xfs       750G   11G  740G   2% /kudgi/cacheArea", 
+        "/dev/sda1                                       xfs       1.9G  131M  1.8G   7% /boot", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/rootvg-home                         xfs        19G   37M   19G   1% /home", 
+        "/dev/mapper/rootvg-var                          xfs        19G  6.3G   13G  34% /var", 
+        "/dev/mapper/rootvg-tmp                          xfs        19G  108M   19G   1% /tmp", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   78G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T   97G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.0T   11T  17% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1"
+    ]
+}
+ok: [frrka] => {
+    "v2.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs        94G  4.7G   89G   6% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   92K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.1G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/mapper/rootvg-usr                          xfs        19G  4.6G   15G  25% /usr", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/Datavg-install                      xfs       200G  104G   97G  52% /install", 
+        "/dev/mapper/Datavg-fstpscacheArea               xfs       750G   57G  694G   8% /fstps/cacheArea", 
+        "/dev/mapper/rootvg-tmp                          xfs        19G  100M   19G   1% /tmp", 
+        "/dev/sda1                                       xfs       1.9G  133M  1.8G   8% /boot", 
+        "/dev/mapper/rootvg-home                         xfs        19G   33M   19G   1% /home", 
+        "/dev/mapper/rootvg-var                          xfs        19G  6.5G   13G  35% /var", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.0T   11T  17% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T   97G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   78G   12T   1% /ibm/fncss2/fncss2_fset1"
+    ]
+}
+ok: [talcher] => {
+    "v2.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs       100G  8.1G   92G   9% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   92K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.0G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/sda1                                       xfs       2.0G  132M  1.9G   7% /boot", 
+        "/dev/mapper/rootvg-home                         xfs        20G   33M   20G   1% /home", 
+        "/dev/mapper/rootvg-tmp                          xfs        20G  127M   20G   1% /tmp", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/Datavg-install                      xfs       200G   86G  115G  43% /install", 
+        "/dev/mapper/Datavg-talcherkanihacacheArea       xfs       750G   49G  702G   7% /talcherkaniha/cacheArea", 
+        "/dev/mapper/rootvg-var                          xfs        20G  9.5G   11G  48% /var", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   78G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.0T   11T  17% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T   97G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "tmpfs                                           tmpfs      13G   12K   13G   1% /run/user/42", 
+        "tmpfs                                           tmpfs      13G     0   13G   0% /run/user/0", 
+        "tmpfs                                           tmpfs      13G     0   13G   0% /run/user/1005"
+    ]
+}
+ok: [barh] => {
+    "v2.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs       100G  8.2G   92G   9% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   92K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.1G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/sda1                                       xfs       2.0G  131M  1.9G   7% /boot", 
+        "/dev/mapper/Datavg-barhcacheArea                xfs       750G  227G  524G  31% /barh/cacheArea", 
+        "/dev/mapper/Datavg-install                      xfs       200G   44G  157G  22% /install", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/rootvg-home                         xfs        20G   63M   20G   1% /home", 
+        "/dev/mapper/rootvg-tmp                          xfs        20G  102M   20G   1% /tmp", 
+        "/dev/mapper/rootvg-var                          xfs        20G  5.3G   15G  27% /var", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   78G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.0T   11T  17% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T   97G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs        12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1"
+    ]
+}
+ok: [mouda] => {
+    "v2.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs        94G  8.0G   86G   9% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   88K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.1G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/Datavg-moudacacheArea               xfs       750G   21G  730G   3% /mouda/cacheArea", 
+        "/dev/mapper/Datavg-install                      xfs       200G  111G   89G  56% /install", 
+        "/dev/sda1                                       xfs       1.9G  132M  1.8G   7% /boot", 
+        "/dev/mapper/rootvg-home                         xfs        19G   69M   19G   1% /home", 
+        "/dev/mapper/rootvg-tmp                          xfs        19G  116M   19G   1% /tmp", 
+        "/dev/mapper/rootvg-var                          xfs        19G  8.5G   11G  46% /var", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.0T   11T  17% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T   97G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   78G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1", 
+        "tmpfs                                           tmpfs      13G   12K   13G   1% /run/user/42", 
+        "tmpfs                                           tmpfs      13G     0   13G   0% /run/user/0", 
+        "tmpfs                                           tmpfs      13G     0   13G   0% /run/user/1005"
+    ]
+}
+ok: [vindhyachal] => {
+    "v2.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs        94G   11G   83G  12% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   92K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G   66M   63G   1% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/Datavg-vindhyachalcacheArea         xfs       750G   50G  701G   7% /vindhyachal/cacheArea", 
+        "/dev/mapper/Datavg-install                      xfs       200G   54G  147G  27% /install", 
+        "/dev/sda1                                       xfs       1.9G  132M  1.8G   7% /boot", 
+        "/dev/mapper/rootvg-tmp                          xfs        19G  211M   19G   2% /tmp", 
+        "/dev/mapper/rootvg-home                         xfs        19G   38M   19G   1% /home", 
+        "/dev/mapper/rootvg-var                          xfs        19G  3.4G   16G  18% /var", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T   97G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   78G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.0T   11T  17% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1"
+    ]
+}
+ok: [dadri] => {
+    "v2.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs        94G  8.4G   85G  10% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   92K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G   50M   63G   1% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/mapper/Datavg-dadricacheArea               xfs       750G  3.5G  747G   1% /dadri/cacheArea", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/Datavg-install                      xfs       200G  105G   96G  53% /install", 
+        "/dev/sda1                                       xfs       1.9G  126M  1.8G   7% /boot", 
+        "/dev/mapper/rootvg-tmp                          xfs        19G  111M   19G   1% /tmp", 
+        "/dev/mapper/rootvg-var                          xfs        19G  3.7G   16G  20% /var", 
+        "/dev/mapper/rootvg-home                         xfs        19G   69M   19G   1% /home", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.0T   11T  17% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T   97G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   78G   12T   1% /ibm/fncss2/fncss2_fset1"
+    ]
+}
+ok: [unchar] => {
+    "v2.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs        94G  8.2G   85G   9% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   92K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.1G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/sda1                                       xfs       1.9G  131M  1.8G   7% /boot", 
+        "/dev/mapper/rootvg-home                         xfs        19G   36M   19G   1% /home", 
+        "/dev/mapper/Datavg-unchaharcacheArea            xfs       750G  5.7G  744G   1% /unchahar/cacheArea", 
+        "/dev/mapper/Datavg-install                      xfs       200G  112G   89G  56% /install", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/rootvg-var                          xfs        19G  7.0G   12G  38% /var", 
+        "/dev/mapper/rootvg-tmp                          xfs        19G  114M   19G   1% /tmp", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs        12T  2.0T   11T  17% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs        12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs        12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs        12T   97G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs        12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs        12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs        12T   78G   12T   1% /ibm/fncss2/fncss2_fset1"
+    ]
+}
+
+TASK [site-disk-role : copy] *******************************************************************************************************************************************
+changed: [scope -> localhost]
+changed: [sipat -> localhost]
+changed: [ramagundam -> localhost]
+changed: [netra -> localhost]
+changed: [faridabad -> localhost]
+changed: [singruali -> localhost]
+changed: [rihand -> localhost]
+changed: [solapur -> localhost]
+changed: [bongaigaon -> localhost]
+changed: [simhadri -> localhost]
+changed: [khalegaon -> localhost]
+changed: [frrka -> localhost]
+changed: [korba -> localhost]
+changed: [kodgi -> localhost]
+changed: [barh -> localhost]
+changed: [talcher -> localhost]
+changed: [dadri -> localhost]
+changed: [mouda -> localhost]
+changed: [vindhyachal -> localhost]
+changed: [unchar -> localhost]
+
+PLAY RECAP *************************************************************************************************************************************************************
+barh                       : ok=3    changed=2    unreachable=0    failed=0   
+bongaigaon                 : ok=3    changed=2    unreachable=0    failed=0   
+dadri                      : ok=3    changed=2    unreachable=0    failed=0   
+faridabad                  : ok=3    changed=2    unreachable=0    failed=0   
+frrka                      : ok=3    changed=2    unreachable=0    failed=0   
+khalegaon                  : ok=3    changed=2    unreachable=0    failed=0   
+kodgi                      : ok=3    changed=2    unreachable=0    failed=0   
+korba                      : ok=3    changed=2    unreachable=0    failed=0   
+mouda                      : ok=3    changed=2    unreachable=0    failed=0   
+netra                      : ok=3    changed=2    unreachable=0    failed=0   
+ramagundam                 : ok=3    changed=2    unreachable=0    failed=0   
+rihand                     : ok=3    changed=2    unreachable=0    failed=0   
+scope                      : ok=3    changed=2    unreachable=0    failed=0   
+simhadri                   : ok=3    changed=2    unreachable=0    failed=0   
+singruali                  : ok=3    changed=2    unreachable=0    failed=0   
+sipat                      : ok=3    changed=2    unreachable=0    failed=0   
+solapur                    : ok=3    changed=2    unreachable=0    failed=0   
+talcher                    : ok=3    changed=2    unreachable=0    failed=0   
+tanda                      : ok=0    changed=0    unreachable=1    failed=0   
+unchar                     : ok=3    changed=2    unreachable=0    failed=0   
+vindhyachal                : ok=3    changed=2    unreachable=0    failed=0   

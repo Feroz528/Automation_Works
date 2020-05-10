@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="180" >
+  <!-- Properties -->
+  <Properties>
+        <!--<Property name="SERVER_NAME">AppClusterMember1</Property> -->
+        <Property name="APP_LOG_LOCATION">/install/EB/BpmCustomLogs</Property>
+         <Property name="ECM_LOG_LOCATION">/install/IBM/pradip/IBM/CustomECMLogs</Property>
+        <Property name="APP_LOG_ARCHIVE_LOCATION">${APP_LOG_LOCATION}/archive</Property>
+  </Properties>
+
+  <!-- Appenders -->
+  <Appenders>
+        <!-- Fire Pollicy Process App -->
+    <RollingFile name="FNMPA" fileName="${APP_LOG_LOCATION}/FNMPA.log" filePattern="${APP_LOG_ARCHIVE_LOCATION}/FNMPA-%d{yyyy-MM-dd}-%i.log.gz">
+        <PatternLayout pattern="[%d{dd/MM/yy HH:mm:ss.SSS zzz}] [%t] %-5level %logger{36} - %msg%n"/>
+                <Policies>
+                        <TimeBasedTriggeringPolicy/>
+                        <SizeBasedTriggeringPolicy size="50 MB"/>
+                </Policies>
+                <DefaultRolloverStrategy max="20"/>
+    </RollingFile>
+ <RollingFile name="NTPCSAP" fileName="${ECM_LOG_LOCATION}/DataSync.log" filePattern="${ECM_LOG_LOCATION}/archive/DataSync-%d{yyyy-MM-dd}-%i.log.gz">
+        <PatternLayout pattern="%d{dd MMM yyyy HH:mm:ss}  %C %M  %L   %m%n"/>
+                <Policies>
+                        <TimeBasedTriggeringPolicy/>
+                        <SizeBasedTriggeringPolicy size="50 MB"/>
+                </Policies>
+                <DefaultRolloverStrategy max="20"/>
+    </RollingFile>
+
+        <!-- Default application looging -->
+    <RollingFile name="DEFAULT" fileName="${APP_LOG_LOCATION}/DEFAULT.log" filePattern="${APP_LOG_ARCHIVE_LOCATION}/DEFAULT-%d{yyyy-MM-dd}-%i.log.gz">
+        <PatternLayout pattern="[%d{dd/MM/yy HH:mm:ss.SSS zzz}] [%t] %-5level %logger{36} - %msg%n"/>
+                <Policies>
+                        <TimeBasedTriggeringPolicy/>
+                        <SizeBasedTriggeringPolicy size="50 MB"/>
+                </Policies>
+                <DefaultRolloverStrategy max="20"/>
+    </RollingFile>
+  </Appenders>
+
+  <!-- Loggers -->
+  <Loggers>
+        <Logger name="FNMPA" level="trace" additivity="false">
+                <AppenderRef ref="FNMPA"/>
+        </Logger>
+	<Logger name="com.ntpc.sap.core.DataSyncFactory" level="trace" additivity="false">
+                <AppenderRef ref="NTPCSAP"/>
+        </Logger>
+		
+    <Root level="trace">
+      <AppenderRef ref="DEFAULT"/>
+    </Root>
+  </Loggers>
+</Configuration>

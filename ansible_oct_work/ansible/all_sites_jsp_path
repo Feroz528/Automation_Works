@@ -1,0 +1,40 @@
+netra | SUCCESS | rc=0 >>
+/install/IBM/WebSphere/AppServer/profiles/AppSrv01/installedApps/netra-rmtnavNode01Cell/navigator.ear/navigator.war
+singruali | SUCCESS | rc=0 >>
+/install/IBM/WebSphere/AppServer/profiles/AppSrv01/installedApps/sing-rmtnavNode01Cell/navigator.ear/navigator.war
+sipat | SUCCESS | rc=0 >>
+/install/IBM/WebSphere/AppServer/profiles/AppSrv01/installedApps/spt-rmtnavNode01Cell/navigator.ear/navigator.war
+ramagundam | SUCCESS | rc=0 >>
+/install/IBM/WebSphere/AppServer/profiles/AppSrv01/installedApps/rgnd-rmtnavNode01Cell/navigator.ear/navigator.war
+scope | SUCCESS | rc=0 >>
+/install/IBM/WebSphere/AppServer/profiles/AppSrv01/installedApps/scope-rmtnavNode01Cell/navigator.ear/navigator.war
+rihand | SUCCESS | rc=0 >>
+/install/IBM/WebSphere/AppServer/profiles/AppSrv01/installedApps/rhd-rmtnavNode01Cell/navigator.ear/navigator.war
+bongaigaon | SUCCESS | rc=0 >>
+/install/IBM/WebSphere/AppServer/profiles/AppSrv01/installedApps/bgn-rmtnavNode01Cell/navigator.ear/navigator.war
+simhadri | SUCCESS | rc=0 >>
+/install/IBM/WebSphere/AppServer/profiles/AppSrv01/installedApps/smdr-rmtnavNode01Cell/navigator.ear/navigator.war
+korba | SUCCESS | rc=0 >>
+/install/IBM/WebSphere/AppServer/profiles/AppSrv01/installedApps/krb-rmtnavNode01Cell/navigator.ear/navigator.war
+khalegaon | SUCCESS | rc=0 >>
+/install/IBM/WebSphere/AppServer/profiles/AppSrv01/installedApps/khlgNode01Cell/navigator.ear/navigator.war
+barh | SUCCESS | rc=0 >>
+/install/IBM/WebSphere/AppServer/profiles/AppSrv01/installedApps/brh-rmtnavNode01Cell/navigator.ear/navigator.war
+frrka | SUCCESS | rc=0 >>
+/install/IBM/WebSphere/AppServer/profiles/AppSrv01/installedApps/frk-rmtnavNode01Cell/navigator.ear/navigator.war
+talcher | SUCCESS | rc=0 >>
+/install/IBM/WebSphere/AppServer/profiles/AppSrv01/installedApps/tlr-rmtnavNode01Cell/navigator.ear/navigator.war
+mouda | SUCCESS | rc=0 >>
+/install/IBM/WebSphere/AppServer/profiles/AppSrv01/installedApps/mda-rmtnavNode01Cell/navigator.ear/navigator.war
+tanda | SUCCESS | rc=0 >>
+/install/IBM/WebSphere/AppServer/profiles/AppSrv01/installedApps/tnd-rmtnavNode01Cell/navigator.ear/navigator.war
+dadri | SUCCESS | rc=0 >>
+/install/IBM/WebSphere/AppServer/profiles/AppSrv01/installedApps/ddr-rmtnavNode01Cell/navigator.ear/navigator.war
+vindhyachal | SUCCESS | rc=0 >>
+/install/IBM/WebSphere/AppServer/profiles/AppSrv01/installedApps/vdchl-rmtnavNode01Cell/navigator.ear/navigator.war
+faridabad | SUCCESS | rc=0 >>
+/install/IBM/WebSphere/AppServer/profiles/AppSrv01/installedApps/bdr-rmtnavNode01Cell/navigator.ear/navigator.war
+solapur | SUCCESS | rc=0 >>
+/install/IBM/WebSphere/AppServer/profiles/AppSrv01/installedApps/slpr-rmtnavNode01Cell/navigator.ear/navigator.war
+kodgi | SUCCESS | rc=0 >>
+/install/IBM/WebSphere/AppServer/profiles/AppSrv01/installedApps/kdg-rmtnavNode01Cell/navigator.ear/navigator.war

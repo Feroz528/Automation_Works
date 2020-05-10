@@ -1,0 +1,13 @@
+---
+- name: application server stopping
+  command: "{{ app_root_path }}/bin/{{ __script_to_run }} {{ app_server }} -user {{ __user_name }} -password {{ password }}"
+  ignore_errors: true
+  register: all_stp
+  failed_when: all_stp.rc != 1 and all_stp.rc != 0
+  tags: all
+- name: application stop status
+  debug: 
+        var: all_stp.stdout_lines
+#- debug: 
+#    msg: "mypass: {{ password }}"
+

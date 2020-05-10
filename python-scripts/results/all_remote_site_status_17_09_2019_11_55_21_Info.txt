@@ -1,0 +1,1788 @@
+
+PLAY [all] *************************************************************************************************************************************************************
+
+TASK [all-app-disk-mem-up : mounts points of host] *********************************************************************************************************************
+changed: [faridabad]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [faridabad] => {
+    "disk_state.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs       100G  9.2G   91G  10% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   92K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.0G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/sda1                                       xfs       2.0G  132M  1.9G   7% /boot", 
+        "/dev/mapper/Datavg-badarpurcacheArea            xfs       750G   51G  700G   7% /badarpur/cacheArea", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/Datavg-install                      xfs       200G   78G  123G  39% /install", 
+        "/dev/mapper/rootvg-home                         xfs        20G   38M   20G   1% /home", 
+        "/dev/mapper/rootvg-tmp                          xfs        20G  147M   20G   1% /tmp", 
+        "/dev/mapper/rootvg-var                          xfs        20G  8.4G   12G  42% /var", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   77G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.3T  9.8T  19% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T  109G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Uptime info of Host] ***********************************************************************************************************************
+changed: [faridabad]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [faridabad] => {
+    "up_op.stdout_lines": [
+        " 10:35:07 up 70 days, 16:23,  2 users,  load average: 5.95, 5.71, 5.87"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Memory info of Host] ***********************************************************************************************************************
+changed: [faridabad]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [faridabad] => {
+    "mem_op.stdout_lines": [
+        "              total        used        free      shared  buff/cache   available", 
+        "Mem:            125          12          25          22          88          90", 
+        "Swap:             0           0           0"
+    ]
+}
+
+TASK [all-app-disk-mem-up : application status] ************************************************************************************************************************
+changed: [faridabad]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [faridabad] => {
+    "app_status.stdout_lines": [
+        "ADMU0116I: Tool information is being logged in file", 
+        "           /install/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/serverStatus.log", 
+        "ADMU0128I: Starting tool with the AppSrv01 profile", 
+        "ADMU0503I: Retrieving server status for all servers", 
+        "ADMU0505I: Servers found in configuration:", 
+        "ADMU0506I: Server name: badarpur", 
+        "ADMU0506I: Server name: webserver1", 
+        "ADMU0508I: The Application Server \"badarpur\" is STARTED", 
+        "ADMU0508I: The Web server \"webserver1\" is RUNNING"
+    ]
+}
+
+TASK [all-app-disk-mem-up : db state] **********************************************************************************************************************************
+changed: [faridabad]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [faridabad] => {
+    "db_op.stdout_lines": [
+        "09/17/2019 10:35:14     0   0   SQL1026N  The database manager is already active.", 
+        "SQL1026N  The database manager is already active."
+    ]
+}
+
+PLAY [all] *************************************************************************************************************************************************************
+
+TASK [all-app-disk-mem-up : mounts points of host] *********************************************************************************************************************
+changed: [netra]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [netra] => {
+    "disk_state.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs        94G  8.8G   85G  10% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G  164K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.1G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/mapper/Datavg-netracacheArea               xfs       750G  229M  750G   1% /netra/cacheArea", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/Datavg-install                      xfs       200G  115G   86G  58% /install", 
+        "/dev/sda1                                       xfs       1.9G  163M  1.7G   9% /boot", 
+        "/dev/mapper/rootvg-tmp                          xfs        19G   98M   19G   1% /tmp", 
+        "/dev/mapper/rootvg-var                          xfs        19G  4.9G   14G  27% /var", 
+        "/dev/mapper/rootvg-home                         xfs        19G  1.1G   18G   6% /home", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.3T  9.8T  19% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T  109G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   77G   12T   1% /ibm/fncss2/fncss2_fset1"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Uptime info of Host] ***********************************************************************************************************************
+changed: [netra]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [netra] => {
+    "up_op.stdout_lines": [
+        " 10:35:16 up 13 days, 17:05,  4 users,  load average: 0.29, 0.13, 0.09"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Memory info of Host] ***********************************************************************************************************************
+changed: [netra]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [netra] => {
+    "mem_op.stdout_lines": [
+        "              total        used        free      shared  buff/cache   available", 
+        "Mem:            125           6          69          22          49          95", 
+        "Swap:           119           0         119"
+    ]
+}
+
+TASK [all-app-disk-mem-up : application status] ************************************************************************************************************************
+changed: [netra]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [netra] => {
+    "app_status.stdout_lines": [
+        "ADMU0116I: Tool information is being logged in file", 
+        "           /install/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/serverStatus.log", 
+        "ADMU0128I: Starting tool with the AppSrv01 profile", 
+        "ADMU0503I: Retrieving server status for all servers", 
+        "ADMU0505I: Servers found in configuration:", 
+        "ADMU0506I: Server name: netra", 
+        "ADMU0506I: Server name: webserver1", 
+        "ADMU0508I: The Application Server \"netra\" is STARTED", 
+        "ADMU0508I: The Web server \"webserver1\" is RUNNING"
+    ]
+}
+
+TASK [all-app-disk-mem-up : db state] **********************************************************************************************************************************
+changed: [netra]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [netra] => {
+    "db_op.stdout_lines": [
+        "09/17/2019 10:35:21     0   0   SQL1026N  The database manager is already active.", 
+        "SQL1026N  The database manager is already active."
+    ]
+}
+
+PLAY [all] *************************************************************************************************************************************************************
+
+TASK [all-app-disk-mem-up : mounts points of host] *********************************************************************************************************************
+changed: [ramagundam]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [ramagundam] => {
+    "disk_state.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs        94G   11G   84G  11% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G  148K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.1G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/sda1                                       xfs       1.9G  132M  1.8G   7% /boot", 
+        "/dev/mapper/Datavg-ramagundamcacheArea          xfs       750G   36G  714G   5% /ramagundam/cacheArea", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/Datavg-install                      xfs       200G  107G   94G  54% /install", 
+        "/dev/mapper/rootvg-home                         xfs        19G   33M   19G   1% /home", 
+        "/dev/mapper/rootvg-tmp                          xfs        19G  152M   19G   1% /tmp", 
+        "/dev/mapper/rootvg-var                          xfs        19G   12G  7.2G  62% /var", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T  109G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   77G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.3T  9.8T  19% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Uptime info of Host] ***********************************************************************************************************************
+changed: [ramagundam]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [ramagundam] => {
+    "up_op.stdout_lines": [
+        " 10:35:25 up 16 days, 21:51,  2 users,  load average: 5.21, 5.59, 5.05"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Memory info of Host] ***********************************************************************************************************************
+changed: [ramagundam]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [ramagundam] => {
+    "mem_op.stdout_lines": [
+        "              total        used        free      shared  buff/cache   available", 
+        "Mem:            125          12          68          22          44          89", 
+        "Swap:           119           0         119"
+    ]
+}
+
+TASK [all-app-disk-mem-up : application status] ************************************************************************************************************************
+changed: [ramagundam]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [ramagundam] => {
+    "app_status.stdout_lines": [
+        "ADMU0116I: Tool information is being logged in file", 
+        "           /install/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/serverStatus.log", 
+        "ADMU0128I: Starting tool with the AppSrv01 profile", 
+        "ADMU0503I: Retrieving server status for all servers", 
+        "ADMU0505I: Servers found in configuration:", 
+        "ADMU0506I: Server name: ramagundam", 
+        "ADMU0506I: Server name: webserver1", 
+        "ADMU0508I: The Application Server \"ramagundam\" is STARTED", 
+        "ADMU0508I: The Web server \"webserver1\" is RUNNING"
+    ]
+}
+
+TASK [all-app-disk-mem-up : db state] **********************************************************************************************************************************
+changed: [ramagundam]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [ramagundam] => {
+    "db_op.stdout_lines": [
+        "09/17/2019 10:35:34     0   0   SQL1026N  The database manager is already active.", 
+        "SQL1026N  The database manager is already active."
+    ]
+}
+
+PLAY [all] *************************************************************************************************************************************************************
+
+TASK [all-app-disk-mem-up : mounts points of host] *********************************************************************************************************************
+changed: [sipat]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [sipat] => {
+    "disk_state.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs        94G  9.3G   84G  10% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   96K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.0G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/mapper/Datavg-sipatcacheArea               xfs       750G   82G  669G  11% /sipat/cacheArea", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/sda1                                       xfs       1.9G  133M  1.8G   7% /boot", 
+        "/dev/mapper/Datavg-install                      xfs       200G  106G   95G  53% /install", 
+        "/dev/mapper/rootvg-tmp                          xfs        19G  148M   19G   1% /tmp", 
+        "/dev/mapper/rootvg-home                         xfs        19G   76M   19G   1% /home", 
+        "/dev/mapper/rootvg-var                          xfs        19G  7.3G   12G  39% /var", 
+        "tmpfs                                           tmpfs      13G   12K   13G   1% /run/user/42", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T  109G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   77G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.3T  9.8T  19% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1", 
+        "tmpfs                                           tmpfs      13G     0   13G   0% /run/user/0", 
+        "tmpfs                                           tmpfs      13G  4.0K   13G   1% /run/user/1005"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Uptime info of Host] ***********************************************************************************************************************
+changed: [sipat]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [sipat] => {
+    "up_op.stdout_lines": [
+        " 10:35:36 up 45 days, 22:56,  2 users,  load average: 9.76, 8.88, 8.55"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Memory info of Host] ***********************************************************************************************************************
+changed: [sipat]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [sipat] => {
+    "mem_op.stdout_lines": [
+        "              total        used        free      shared  buff/cache   available", 
+        "Mem:            125          14           0          22         110          87", 
+        "Swap:           119           0         119"
+    ]
+}
+
+TASK [all-app-disk-mem-up : application status] ************************************************************************************************************************
+changed: [sipat]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [sipat] => {
+    "app_status.stdout_lines": [
+        "ADMU0116I: Tool information is being logged in file", 
+        "           /install/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/serverStatus.log", 
+        "ADMU0128I: Starting tool with the AppSrv01 profile", 
+        "ADMU0503I: Retrieving server status for all servers", 
+        "ADMU0505I: Servers found in configuration:", 
+        "ADMU0506I: Server name: sipat", 
+        "ADMU0506I: Server name: webserver1", 
+        "ADMU0508I: The Application Server \"sipat\" is STARTED", 
+        "ADMU0508I: The Web server \"webserver1\" is RUNNING"
+    ]
+}
+
+TASK [all-app-disk-mem-up : db state] **********************************************************************************************************************************
+changed: [sipat]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [sipat] => {
+    "db_op.stdout_lines": [
+        "09/17/2019 10:35:44     0   0   SQL1026N  The database manager is already active.", 
+        "SQL1026N  The database manager is already active."
+    ]
+}
+
+PLAY [all] *************************************************************************************************************************************************************
+
+TASK [all-app-disk-mem-up : mounts points of host] *********************************************************************************************************************
+changed: [scope]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [scope] => {
+    "disk_state.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         ext4       99G   11G   84G  11% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   96K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.1G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/sda1                                       ext4      2.0G  105M  1.7G   6% /boot", 
+        "/dev/mapper/Datavg-scopecacheArea               xfs       750G   18G  733G   3% /scope/cacheArea", 
+        "/dev/mapper/Datavg-install                      xfs       200G   88G  113G  44% /install", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/rootvg-home                         ext4       20G  129M   19G   1% /home", 
+        "/dev/mapper/rootvg-tmp                          ext4       20G  140M   19G   1% /tmp", 
+        "/dev/mapper/rootvg-var                          ext4       20G  6.0G   13G  33% /var", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T  109G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   77G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.3T  9.8T  19% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Uptime info of Host] ***********************************************************************************************************************
+changed: [scope]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [scope] => {
+    "up_op.stdout_lines": [
+        " 10:35:46 up 53 days, 11:34,  2 users,  load average: 4.05, 3.83, 3.16"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Memory info of Host] ***********************************************************************************************************************
+changed: [scope]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [scope] => {
+    "mem_op.stdout_lines": [
+        "              total        used        free      shared  buff/cache   available", 
+        "Mem:            125           8          61          22          54          93", 
+        "Swap:           119           0         119"
+    ]
+}
+
+TASK [all-app-disk-mem-up : application status] ************************************************************************************************************************
+changed: [scope]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [scope] => {
+    "app_status.stdout_lines": [
+        "ADMU0116I: Tool information is being logged in file", 
+        "           /install/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/serverStatus.log", 
+        "ADMU0128I: Starting tool with the AppSrv01 profile", 
+        "ADMU0503I: Retrieving server status for all servers", 
+        "ADMU0505I: Servers found in configuration:", 
+        "ADMU0506I: Server name: scope", 
+        "ADMU0506I: Server name: webserver1", 
+        "ADMU0508I: The Application Server \"scope\" is STARTED", 
+        "ADMU0508I: The Web server \"webserver1\" is RUNNING"
+    ]
+}
+
+TASK [all-app-disk-mem-up : db state] **********************************************************************************************************************************
+changed: [scope]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [scope] => {
+    "db_op.stdout_lines": [
+        "09/17/2019 10:35:53     0   0   SQL1026N  The database manager is already active.", 
+        "SQL1026N  The database manager is already active."
+    ]
+}
+
+PLAY [all] *************************************************************************************************************************************************************
+
+TASK [all-app-disk-mem-up : mounts points of host] *********************************************************************************************************************
+changed: [singruali]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [singruali] => {
+    "disk_state.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs        94G  8.2G   85G   9% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G  100K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.1G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/sda1                                       xfs       1.9G  132M  1.8G   7% /boot", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/Datavg-install                      xfs       200G  107G   94G  54% /install", 
+        "/dev/mapper/Datavg-singraulicacheArea           xfs       750G  8.2G  742G   2% /singrauli/cacheArea", 
+        "/dev/mapper/rootvg-var                          xfs        19G  5.9G   13G  32% /var", 
+        "/dev/mapper/rootvg-home                         xfs        19G   64M   19G   1% /home", 
+        "/dev/mapper/rootvg-tmp                          xfs        19G  106M   19G   1% /tmp", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T  109G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.3T  9.8T  19% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   77G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs        12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Uptime info of Host] ***********************************************************************************************************************
+changed: [singruali]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [singruali] => {
+    "up_op.stdout_lines": [
+        " 10:35:55 up 108 days, 22:42,  2 users,  load average: 2.01, 1.67, 1.54"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Memory info of Host] ***********************************************************************************************************************
+changed: [singruali]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [singruali] => {
+    "mem_op.stdout_lines": [
+        "              total        used        free      shared  buff/cache   available", 
+        "Mem:            125          13          34          22          77          88", 
+        "Swap:           119           0         119"
+    ]
+}
+
+TASK [all-app-disk-mem-up : application status] ************************************************************************************************************************
+changed: [singruali]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [singruali] => {
+    "app_status.stdout_lines": [
+        "ADMU0116I: Tool information is being logged in file", 
+        "           /install/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/serverStatus.log", 
+        "ADMU0128I: Starting tool with the AppSrv01 profile", 
+        "ADMU0503I: Retrieving server status for all servers", 
+        "ADMU0505I: Servers found in configuration:", 
+        "ADMU0506I: Server name: singrauli", 
+        "ADMU0506I: Server name: webserver1", 
+        "ADMU0508I: The Application Server \"singrauli\" is STARTED", 
+        "ADMU0508I: The Web server \"webserver1\" is RUNNING"
+    ]
+}
+
+TASK [all-app-disk-mem-up : db state] **********************************************************************************************************************************
+changed: [singruali]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [singruali] => {
+    "db_op.stdout_lines": [
+        "09/17/2019 10:36:01     0   0   SQL1026N  The database manager is already active.", 
+        "SQL1026N  The database manager is already active."
+    ]
+}
+
+PLAY [all] *************************************************************************************************************************************************************
+
+TASK [all-app-disk-mem-up : mounts points of host] *********************************************************************************************************************
+changed: [rihand]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [rihand] => {
+    "disk_state.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs        94G   12G   82G  13% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   96K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.1G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/sr1                                        iso9660   3.6G  3.6G     0 100% /mnt", 
+        "/dev/mapper/Datavg-rihandcacheArea              xfs       750G   12G  739G   2% /rihand/cacheArea", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/Datavg-install                      xfs       200G  102G   99G  51% /install", 
+        "/dev/sda1                                       xfs       1.9G  126M  1.8G   7% /boot", 
+        "/dev/mapper/rootvg-tmp                          xfs        19G   93M   19G   1% /tmp", 
+        "/dev/mapper/rootvg-home                         xfs        19G   37M   19G   1% /home", 
+        "/dev/mapper/rootvg-var                          xfs        19G  5.5G   14G  30% /var", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs        12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.3T  9.8T  19% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T  109G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   77G   12T   1% /ibm/fncss2/fncss2_fset1"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Uptime info of Host] ***********************************************************************************************************************
+changed: [rihand]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [rihand] => {
+    "up_op.stdout_lines": [
+        " 10:36:06 up 59 days, 17:29,  3 users,  load average: 0.00, 0.01, 0.05"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Memory info of Host] ***********************************************************************************************************************
+changed: [rihand]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [rihand] => {
+    "mem_op.stdout_lines": [
+        "              total        used        free      shared  buff/cache   available", 
+        "Mem:            125           9          49          22          67          92", 
+        "Swap:           119           0         119"
+    ]
+}
+
+TASK [all-app-disk-mem-up : application status] ************************************************************************************************************************
+changed: [rihand]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [rihand] => {
+    "app_status.stdout_lines": [
+        "ADMU0116I: Tool information is being logged in file", 
+        "           /install/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/serverStatus.log", 
+        "ADMU0128I: Starting tool with the AppSrv01 profile", 
+        "ADMU0503I: Retrieving server status for all servers", 
+        "ADMU0505I: Servers found in configuration:", 
+        "ADMU0506I: Server name: rihand", 
+        "ADMU0506I: Server name: webserver1", 
+        "ADMU0508I: The Application Server \"rihand\" is STARTED", 
+        "ADMU0508I: The Web server \"webserver1\" is RUNNING"
+    ]
+}
+
+TASK [all-app-disk-mem-up : db state] **********************************************************************************************************************************
+changed: [rihand]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [rihand] => {
+    "db_op.stdout_lines": [
+        "09/17/2019 10:36:17     0   0   SQL1026N  The database manager is already active.", 
+        "SQL1026N  The database manager is already active."
+    ]
+}
+
+PLAY [all] *************************************************************************************************************************************************************
+
+TASK [all-app-disk-mem-up : mounts points of host] *********************************************************************************************************************
+changed: [bongaigaon]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [bongaigaon] => {
+    "disk_state.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs       100G  8.4G   92G   9% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   92K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.1G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/mapper/Datavg-bongaigaoncacheArea          xfs       750G   18G  733G   3% /bongaigaon/cacheArea", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/sda1                                       xfs       2.0G  131M  1.9G   7% /boot", 
+        "/dev/mapper/Datavg-install                      xfs       200G   87G  114G  44% /install", 
+        "/dev/mapper/rootvg-var                          xfs        20G   11G   10G  51% /var", 
+        "/dev/mapper/rootvg-tmp                          xfs        20G  110M   20G   1% /tmp", 
+        "/dev/mapper/rootvg-home                         xfs        20G   34M   20G   1% /home", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   77G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.3T  9.8T  19% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T  109G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1", 
+        "tmpfs                                           tmpfs      13G   12K   13G   1% /run/user/42", 
+        "tmpfs                                           tmpfs      13G     0   13G   0% /run/user/0", 
+        "tmpfs                                           tmpfs      13G     0   13G   0% /run/user/1005"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Uptime info of Host] ***********************************************************************************************************************
+changed: [bongaigaon]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [bongaigaon] => {
+    "up_op.stdout_lines": [
+        " 10:36:20 up 68 days, 21:04,  2 users,  load average: 1.93, 1.86, 1.52"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Memory info of Host] ***********************************************************************************************************************
+changed: [bongaigaon]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [bongaigaon] => {
+    "mem_op.stdout_lines": [
+        "              total        used        free      shared  buff/cache   available", 
+        "Mem:            125          15          59          22          50          86", 
+        "Swap:           127           0         127"
+    ]
+}
+
+TASK [all-app-disk-mem-up : application status] ************************************************************************************************************************
+changed: [bongaigaon]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [bongaigaon] => {
+    "app_status.stdout_lines": [
+        "ADMU0116I: Tool information is being logged in file", 
+        "           /install/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/serverStatus.log", 
+        "ADMU0128I: Starting tool with the AppSrv01 profile", 
+        "ADMU0503I: Retrieving server status for all servers", 
+        "ADMU0505I: Servers found in configuration:", 
+        "ADMU0506I: Server name: kokrajhar", 
+        "ADMU0506I: Server name: webserver1", 
+        "ADMU0508I: The Application Server \"kokrajhar\" is STARTED", 
+        "ADMU0508I: The Web server \"webserver1\" is RUNNING"
+    ]
+}
+
+TASK [all-app-disk-mem-up : db state] **********************************************************************************************************************************
+changed: [bongaigaon]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [bongaigaon] => {
+    "db_op.stdout_lines": [
+        "09/17/2019 10:36:28     0   0   SQL1026N  The database manager is already active.", 
+        "SQL1026N  The database manager is already active."
+    ]
+}
+
+PLAY [all] *************************************************************************************************************************************************************
+
+TASK [all-app-disk-mem-up : mounts points of host] *********************************************************************************************************************
+changed: [solapur]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [solapur] => {
+    "disk_state.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rhel-root                           xfs        94G  9.5G   84G  11% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   92K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.0G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/sda1                                       xfs       1.9G  132M  1.8G   7% /boot", 
+        "/dev/mapper/Datavg-install                      xfs       200G   93G  108G  47% /install", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/Datavg-solapurcacheArea             xfs       750G   22G  728G   3% /solapur/cacheArea", 
+        "/dev/mapper/rhel-tmp                            xfs        19G  108M   19G   1% /tmp", 
+        "/dev/mapper/rhel-home                           xfs        19G   34M   19G   1% /home", 
+        "/dev/mapper/rhel-var                            xfs        19G  7.4G   12G  40% /var", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T  109G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   77G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.3T  9.8T  19% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Uptime info of Host] ***********************************************************************************************************************
+changed: [solapur]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [solapur] => {
+    "up_op.stdout_lines": [
+        " 10:36:42 up 84 days, 22:04,  2 users,  load average: 2.10, 1.94, 1.96"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Memory info of Host] ***********************************************************************************************************************
+changed: [solapur]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [solapur] => {
+    "mem_op.stdout_lines": [
+        "              total        used        free      shared  buff/cache   available", 
+        "Mem:            125          12          58          22          55          89", 
+        "Swap:           119           0         119"
+    ]
+}
+
+TASK [all-app-disk-mem-up : application status] ************************************************************************************************************************
+changed: [solapur]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [solapur] => {
+    "app_status.stdout_lines": [
+        "ADMU0116I: Tool information is being logged in file", 
+        "           /install/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/serverStatus.log", 
+        "ADMU0128I: Starting tool with the AppSrv01 profile", 
+        "ADMU0503I: Retrieving server status for all servers", 
+        "ADMU0505I: Servers found in configuration:", 
+        "ADMU0506I: Server name: solapur", 
+        "ADMU0506I: Server name: webserver1", 
+        "ADMU0508I: The Application Server \"solapur\" is STARTED", 
+        "ADMU0508I: The Web server \"webserver1\" is RUNNING"
+    ]
+}
+
+TASK [all-app-disk-mem-up : db state] **********************************************************************************************************************************
+changed: [solapur]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [solapur] => {
+    "db_op.stdout_lines": [
+        "09/17/2019 10:36:50     0   0   SQL1026N  The database manager is already active.", 
+        "SQL1026N  The database manager is already active."
+    ]
+}
+
+PLAY [all] *************************************************************************************************************************************************************
+
+TASK [all-app-disk-mem-up : mounts points of host] *********************************************************************************************************************
+changed: [simhadri]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [simhadri] => {
+    "disk_state.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs        94G  8.3G   85G   9% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   92K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.1G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/sda1                                       xfs       1.9G  132M  1.8G   7% /boot", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/Datavg-simhadricacheArea            xfs       750G   92G  659G  13% /simhadri/cacheArea", 
+        "/dev/mapper/Datavg-install                      xfs       200G  104G   97G  52% /install", 
+        "/dev/mapper/rootvg-home                         xfs        19G   33M   19G   1% /home", 
+        "/dev/mapper/rootvg-var                          xfs        19G  8.2G   11G  44% /var", 
+        "/dev/mapper/rootvg-tmp                          xfs        19G  133M   19G   1% /tmp", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.3T  9.8T  19% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   77G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T  109G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "tmpfs                                           tmpfs      13G   12K   13G   1% /run/user/42", 
+        "tmpfs                                           tmpfs      13G     0   13G   0% /run/user/0", 
+        "tmpfs                                           tmpfs      13G     0   13G   0% /run/user/1005"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Uptime info of Host] ***********************************************************************************************************************
+changed: [simhadri]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [simhadri] => {
+    "up_op.stdout_lines": [
+        " 10:36:53 up 316 days, 19:10,  2 users,  load average: 13.18, 12.83, 11.79"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Memory info of Host] ***********************************************************************************************************************
+changed: [simhadri]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [simhadri] => {
+    "mem_op.stdout_lines": [
+        "              total        used        free      shared  buff/cache   available", 
+        "Mem:            125           8           4          22         113          94", 
+        "Swap:           119           0         118"
+    ]
+}
+
+TASK [all-app-disk-mem-up : application status] ************************************************************************************************************************
+changed: [simhadri]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [simhadri] => {
+    "app_status.stdout_lines": [
+        "ADMU0116I: Tool information is being logged in file", 
+        "           /install/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/serverStatus.log", 
+        "ADMU0128I: Starting tool with the AppSrv01 profile", 
+        "ADMU0503I: Retrieving server status for all servers", 
+        "ADMU0505I: Servers found in configuration:", 
+        "ADMU0506I: Server name: simhadri", 
+        "ADMU0506I: Server name: webserver1", 
+        "ADMU0508I: The Application Server \"simhadri\" is STARTED", 
+        "ADMU0508I: The Web server \"webserver1\" is RUNNING"
+    ]
+}
+
+TASK [all-app-disk-mem-up : db state] **********************************************************************************************************************************
+changed: [simhadri]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [simhadri] => {
+    "db_op.stdout_lines": [
+        "09/17/2019 10:37:02     0   0   SQL1026N  The database manager is already active.", 
+        "SQL1026N  The database manager is already active."
+    ]
+}
+
+PLAY [all] *************************************************************************************************************************************************************
+
+TASK [all-app-disk-mem-up : mounts points of host] *********************************************************************************************************************
+changed: [korba]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [korba] => {
+    "disk_state.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs        94G  8.6G   85G  10% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   92K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.0G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/mapper/Datavg-korbacacheArea               xfs       750G   35G  716G   5% /korba/cacheArea", 
+        "/dev/mapper/Datavg-install                      xfs       200G  105G   96G  53% /install", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/sda1                                       xfs       1.9G  133M  1.8G   7% /boot", 
+        "/dev/mapper/rootvg-var                          xfs        19G  7.2G   12G  39% /var", 
+        "/dev/mapper/rootvg-tmp                          xfs        19G  104M   19G   1% /tmp", 
+        "/dev/mapper/rootvg-home                         xfs        19G   33M   19G   1% /home", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.3T  9.8T  19% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   77G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T  109G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "tmpfs                                           tmpfs      13G   12K   13G   1% /run/user/42", 
+        "tmpfs                                           tmpfs      13G     0   13G   0% /run/user/0", 
+        "tmpfs                                           tmpfs      13G     0   13G   0% /run/user/1005"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Uptime info of Host] ***********************************************************************************************************************
+changed: [korba]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [korba] => {
+    "up_op.stdout_lines": [
+        " 10:37:04 up 4 days, 18:40,  2 users,  load average: 0.79, 0.66, 0.62"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Memory info of Host] ***********************************************************************************************************************
+changed: [korba]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [korba] => {
+    "mem_op.stdout_lines": [
+        "              total        used        free      shared  buff/cache   available", 
+        "Mem:            125           7          85          22          32          94", 
+        "Swap:           119           0         119"
+    ]
+}
+
+TASK [all-app-disk-mem-up : application status] ************************************************************************************************************************
+changed: [korba]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [korba] => {
+    "app_status.stdout_lines": [
+        "ADMU0116I: Tool information is being logged in file", 
+        "           /install/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/serverStatus.log", 
+        "ADMU0128I: Starting tool with the AppSrv01 profile", 
+        "ADMU0503I: Retrieving server status for all servers", 
+        "ADMU0505I: Servers found in configuration:", 
+        "ADMU0506I: Server name: korba", 
+        "ADMU0506I: Server name: webserver1", 
+        "ADMU0508I: The Application Server \"korba\" is STARTED", 
+        "ADMU0508I: The Web server \"webserver1\" is RUNNING"
+    ]
+}
+
+TASK [all-app-disk-mem-up : db state] **********************************************************************************************************************************
+changed: [korba]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [korba] => {
+    "db_op.stdout_lines": [
+        "09/17/2019 10:37:10     0   0   SQL1026N  The database manager is already active.", 
+        "SQL1026N  The database manager is already active."
+    ]
+}
+
+PLAY [all] *************************************************************************************************************************************************************
+
+TASK [all-app-disk-mem-up : mounts points of host] *********************************************************************************************************************
+changed: [khalegaon]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [khalegaon] => {
+    "disk_state.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs       100G  8.2G   92G   9% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   92K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.1G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/Datavg-install                      xfs       200G  108G   93G  54% /install", 
+        "/dev/mapper/Datavg-KhstppcacheArea              xfs       750G   32G  719G   5% /Khstpp/cacheArea", 
+        "/dev/sda1                                       xfs       2.0G  133M  1.9G   7% /boot", 
+        "/dev/mapper/rootvg-var                          xfs        20G  8.3G   12G  42% /var", 
+        "/dev/mapper/rootvg-tmp                          xfs        20G  101M   20G   1% /tmp", 
+        "/dev/mapper/rootvg-home                         xfs        20G   81M   20G   1% /home", 
+        "tmpfs                                           tmpfs      13G   12K   13G   1% /run/user/42", 
+        "tmpfs                                           tmpfs      13G     0   13G   0% /run/user/1005", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs        12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.3T  9.8T  19% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T  109G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   77G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "tmpfs                                           tmpfs      13G     0   13G   0% /run/user/0"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Uptime info of Host] ***********************************************************************************************************************
+changed: [khalegaon]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [khalegaon] => {
+    "up_op.stdout_lines": [
+        " 10:37:12 up 24 days, 18:21,  2 users,  load average: 1.72, 1.42, 1.38"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Memory info of Host] ***********************************************************************************************************************
+changed: [khalegaon]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [khalegaon] => {
+    "mem_op.stdout_lines": [
+        "              total        used        free      shared  buff/cache   available", 
+        "Mem:            125           9          76          22          39          92", 
+        "Swap:           127           0         127"
+    ]
+}
+
+TASK [all-app-disk-mem-up : application status] ************************************************************************************************************************
+changed: [khalegaon]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [khalegaon] => {
+    "app_status.stdout_lines": [
+        "ADMU0116I: Tool information is being logged in file", 
+        "           /install/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/serverStatus.log", 
+        "ADMU0128I: Starting tool with the AppSrv01 profile", 
+        "ADMU0503I: Retrieving server status for all servers", 
+        "ADMU0505I: Servers found in configuration:", 
+        "ADMU0506I: Server name: kahalgaon", 
+        "ADMU0506I: Server name: webserver1", 
+        "ADMU0508I: The Application Server \"kahalgaon\" is STARTED", 
+        "ADMU0508I: The Web server \"webserver1\" is RUNNING"
+    ]
+}
+
+TASK [all-app-disk-mem-up : db state] **********************************************************************************************************************************
+changed: [khalegaon]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [khalegaon] => {
+    "db_op.stdout_lines": [
+        "09/17/2019 10:37:19     0   0   SQL1026N  The database manager is already active.", 
+        "SQL1026N  The database manager is already active."
+    ]
+}
+
+PLAY [all] *************************************************************************************************************************************************************
+
+TASK [all-app-disk-mem-up : mounts points of host] *********************************************************************************************************************
+changed: [kodgi]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [kodgi] => {
+    "disk_state.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root00                       xfs        94G  7.5G   86G   9% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   92K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.1G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/mapper/Datavg-install                      xfs       200G  102G   99G  51% /install", 
+        "/dev/mapper/Datavg-kudgicacheArea               xfs       750G   12G  739G   2% /kudgi/cacheArea", 
+        "/dev/sda1                                       xfs       1.9G  131M  1.8G   7% /boot", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/rootvg-home                         xfs        19G   37M   19G   1% /home", 
+        "/dev/mapper/rootvg-var                          xfs        19G  6.1G   13G  33% /var", 
+        "/dev/mapper/rootvg-tmp                          xfs        19G  108M   19G   1% /tmp", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   77G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T  109G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.3T  9.8T  19% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Uptime info of Host] ***********************************************************************************************************************
+changed: [kodgi]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [kodgi] => {
+    "up_op.stdout_lines": [
+        " 10:37:32 up 112 days, 28 min,  2 users,  load average: 4.37, 4.05, 3.76"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Memory info of Host] ***********************************************************************************************************************
+changed: [kodgi]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [kodgi] => {
+    "mem_op.stdout_lines": [
+        "              total        used        free      shared  buff/cache   available", 
+        "Mem:            125          11          40          22          73          90", 
+        "Swap:           119           0         119"
+    ]
+}
+
+TASK [all-app-disk-mem-up : application status] ************************************************************************************************************************
+changed: [kodgi]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [kodgi] => {
+    "app_status.stdout_lines": [
+        "ADMU0116I: Tool information is being logged in file", 
+        "           /install/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/serverStatus.log", 
+        "ADMU0128I: Starting tool with the AppSrv01 profile", 
+        "ADMU0503I: Retrieving server status for all servers", 
+        "ADMU0505I: Servers found in configuration:", 
+        "ADMU0506I: Server name: kdg", 
+        "ADMU0506I: Server name: webserver1", 
+        "ADMU0508I: The Application Server \"kdg\" is STARTED", 
+        "ADMU0508I: The Web server \"webserver1\" is RUNNING"
+    ]
+}
+
+TASK [all-app-disk-mem-up : db state] **********************************************************************************************************************************
+changed: [kodgi]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [kodgi] => {
+    "db_op.stdout_lines": [
+        "09/17/2019 10:37:41     0   0   SQL1026N  The database manager is already active.", 
+        "SQL1026N  The database manager is already active."
+    ]
+}
+
+PLAY [all] *************************************************************************************************************************************************************
+
+TASK [all-app-disk-mem-up : mounts points of host] *********************************************************************************************************************
+changed: [frrka]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [frrka] => {
+    "disk_state.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs        94G  4.7G   89G   5% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   92K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.0G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/mapper/rootvg-usr                          xfs        19G  4.6G   15G  25% /usr", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/Datavg-install                      xfs       200G  104G   97G  52% /install", 
+        "/dev/mapper/Datavg-fstpscacheArea               xfs       750G   66G  685G   9% /fstps/cacheArea", 
+        "/dev/mapper/rootvg-tmp                          xfs        19G  107M   19G   1% /tmp", 
+        "/dev/sda1                                       xfs       1.9G  133M  1.8G   8% /boot", 
+        "/dev/mapper/rootvg-home                         xfs        19G   33M   19G   1% /home", 
+        "/dev/mapper/rootvg-var                          xfs        19G  6.3G   13G  34% /var", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.3T  9.8T  19% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T  109G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   77G   12T   1% /ibm/fncss2/fncss2_fset1"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Uptime info of Host] ***********************************************************************************************************************
+changed: [frrka]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [frrka] => {
+    "up_op.stdout_lines": [
+        " 10:37:44 up 371 days, 16:55,  2 users,  load average: 1.28, 1.09, 1.06"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Memory info of Host] ***********************************************************************************************************************
+changed: [frrka]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [frrka] => {
+    "mem_op.stdout_lines": [
+        "              total        used        free      shared  buff/cache   available", 
+        "Mem:            125           9           6          22         109          92", 
+        "Swap:           119           0         119"
+    ]
+}
+
+TASK [all-app-disk-mem-up : application status] ************************************************************************************************************************
+changed: [frrka]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [frrka] => {
+    "app_status.stdout_lines": [
+        "ADMU0116I: Tool information is being logged in file", 
+        "           /install/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/serverStatus.log", 
+        "ADMU0128I: Starting tool with the AppSrv01 profile", 
+        "ADMU0503I: Retrieving server status for all servers", 
+        "ADMU0505I: Servers found in configuration:", 
+        "ADMU0506I: Server name: farakka", 
+        "ADMU0506I: Server name: webserver1", 
+        "ADMU0508I: The Application Server \"farakka\" is STARTED", 
+        "ADMU0508I: The Web server \"webserver1\" is RUNNING"
+    ]
+}
+
+TASK [all-app-disk-mem-up : db state] **********************************************************************************************************************************
+changed: [frrka]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [frrka] => {
+    "db_op.stdout_lines": [
+        "09/17/2019 10:37:52     0   0   SQL1026N  The database manager is already active.", 
+        "SQL1026N  The database manager is already active."
+    ]
+}
+
+PLAY [all] *************************************************************************************************************************************************************
+
+TASK [all-app-disk-mem-up : mounts points of host] *********************************************************************************************************************
+changed: [barh]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [barh] => {
+    "disk_state.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs       100G  8.1G   92G   9% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   92K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.1G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/sda1                                       xfs       2.0G  131M  1.9G   7% /boot", 
+        "/dev/mapper/Datavg-barhcacheArea                xfs       750G  227G  524G  31% /barh/cacheArea", 
+        "/dev/mapper/Datavg-install                      xfs       200G   44G  157G  22% /install", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/rootvg-home                         xfs        20G   63M   20G   1% /home", 
+        "/dev/mapper/rootvg-tmp                          xfs        20G   98M   20G   1% /tmp", 
+        "/dev/mapper/rootvg-var                          xfs        20G  9.9G   11G  50% /var", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   77G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.3T  9.8T  19% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T  109G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs        12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Uptime info of Host] ***********************************************************************************************************************
+changed: [barh]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [barh] => {
+    "up_op.stdout_lines": [
+        " 10:37:54 up 38 days, 21:28,  2 users,  load average: 0.09, 0.05, 0.05"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Memory info of Host] ***********************************************************************************************************************
+changed: [barh]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [barh] => {
+    "mem_op.stdout_lines": [
+        "              total        used        free      shared  buff/cache   available", 
+        "Mem:            125           8           0          22         117          94", 
+        "Swap:           127           0         127"
+    ]
+}
+
+TASK [all-app-disk-mem-up : application status] ************************************************************************************************************************
+changed: [barh]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [barh] => {
+    "app_status.stdout_lines": [
+        "ADMU0116I: Tool information is being logged in file", 
+        "           /install/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/serverStatus.log", 
+        "ADMU0128I: Starting tool with the AppSrv01 profile", 
+        "ADMU0503I: Retrieving server status for all servers", 
+        "ADMU0505I: Servers found in configuration:", 
+        "ADMU0506I: Server name: barh", 
+        "ADMU0506I: Server name: webserver1", 
+        "ADMU0508I: The Application Server \"barh\" is STARTED", 
+        "ADMU0508I: The Web server \"webserver1\" is RUNNING"
+    ]
+}
+
+TASK [all-app-disk-mem-up : db state] **********************************************************************************************************************************
+changed: [barh]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [barh] => {
+    "db_op.stdout_lines": [
+        "09/17/2019 10:38:00     0   0   SQL1026N  The database manager is already active.", 
+        "SQL1026N  The database manager is already active."
+    ]
+}
+
+PLAY [all] *************************************************************************************************************************************************************
+
+TASK [all-app-disk-mem-up : mounts points of host] *********************************************************************************************************************
+changed: [talcher]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [talcher] => {
+    "disk_state.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs       100G  8.1G   92G   9% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   92K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.1G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/sda1                                       xfs       2.0G  132M  1.9G   7% /boot", 
+        "/dev/mapper/rootvg-home                         xfs        20G   33M   20G   1% /home", 
+        "/dev/mapper/rootvg-tmp                          xfs        20G  142M   20G   1% /tmp", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/Datavg-install                      xfs       200G   87G  114G  44% /install", 
+        "/dev/mapper/Datavg-talcherkanihacacheArea       xfs       750G   59G  692G   8% /talcherkaniha/cacheArea", 
+        "/dev/mapper/rootvg-var                          xfs        20G   11G  9.4G  54% /var", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   77G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.3T  9.8T  19% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T  109G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "tmpfs                                           tmpfs      13G   12K   13G   1% /run/user/42", 
+        "tmpfs                                           tmpfs      13G     0   13G   0% /run/user/0", 
+        "tmpfs                                           tmpfs      13G     0   13G   0% /run/user/1005"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Uptime info of Host] ***********************************************************************************************************************
+changed: [talcher]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [talcher] => {
+    "up_op.stdout_lines": [
+        " 10:38:03 up 74 days, 22:46,  2 users,  load average: 3.68, 3.82, 3.50"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Memory info of Host] ***********************************************************************************************************************
+changed: [talcher]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [talcher] => {
+    "mem_op.stdout_lines": [
+        "              total        used        free      shared  buff/cache   available", 
+        "Mem:            125          16           5          22         103          85", 
+        "Swap:           127           0         127"
+    ]
+}
+
+TASK [all-app-disk-mem-up : application status] ************************************************************************************************************************
+changed: [talcher]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [talcher] => {
+    "app_status.stdout_lines": [
+        "ADMU0116I: Tool information is being logged in file", 
+        "           /install/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/serverStatus.log", 
+        "ADMU0128I: Starting tool with the AppSrv01 profile", 
+        "ADMU0503I: Retrieving server status for all servers", 
+        "ADMU0505I: Servers found in configuration:", 
+        "ADMU0506I: Server name: talcher", 
+        "ADMU0506I: Server name: webserver1", 
+        "ADMU0508I: The Application Server \"talcher\" is STARTED", 
+        "ADMU0508I: The Web server \"webserver1\" is RUNNING"
+    ]
+}
+
+TASK [all-app-disk-mem-up : db state] **********************************************************************************************************************************
+changed: [talcher]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [talcher] => {
+    "db_op.stdout_lines": [
+        "09/17/2019 10:38:11     0   0   SQL1026N  The database manager is already active.", 
+        "SQL1026N  The database manager is already active."
+    ]
+}
+
+PLAY [all] *************************************************************************************************************************************************************
+
+TASK [all-app-disk-mem-up : mounts points of host] *********************************************************************************************************************
+changed: [mouda]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [mouda] => {
+    "disk_state.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs        94G  8.0G   86G   9% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   88K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.1G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/Datavg-moudacacheArea               xfs       750G   22G  729G   3% /mouda/cacheArea", 
+        "/dev/mapper/Datavg-install                      xfs       200G  112G   89G  56% /install", 
+        "/dev/sda1                                       xfs       1.9G  132M  1.8G   7% /boot", 
+        "/dev/mapper/rootvg-home                         xfs        19G   69M   19G   1% /home", 
+        "/dev/mapper/rootvg-tmp                          xfs        19G  100M   19G   1% /tmp", 
+        "/dev/mapper/rootvg-var                          xfs        19G  8.8G   10G  47% /var", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.3T  9.8T  19% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T  109G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   77G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1", 
+        "tmpfs                                           tmpfs      13G   12K   13G   1% /run/user/42", 
+        "tmpfs                                           tmpfs      13G     0   13G   0% /run/user/0", 
+        "tmpfs                                           tmpfs      13G     0   13G   0% /run/user/1005"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Uptime info of Host] ***********************************************************************************************************************
+changed: [mouda]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [mouda] => {
+    "up_op.stdout_lines": [
+        " 10:38:13 up 74 days, 22:46,  2 users,  load average: 4.33, 3.84, 3.45"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Memory info of Host] ***********************************************************************************************************************
+changed: [mouda]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [mouda] => {
+    "mem_op.stdout_lines": [
+        "              total        used        free      shared  buff/cache   available", 
+        "Mem:            125          16          50          22          58          86", 
+        "Swap:           119           0         119"
+    ]
+}
+
+TASK [all-app-disk-mem-up : application status] ************************************************************************************************************************
+changed: [mouda]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [mouda] => {
+    "app_status.stdout_lines": [
+        "ADMU0116I: Tool information is being logged in file", 
+        "           /install/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/serverStatus.log", 
+        "ADMU0128I: Starting tool with the AppSrv01 profile", 
+        "ADMU0503I: Retrieving server status for all servers", 
+        "ADMU0505I: Servers found in configuration:", 
+        "ADMU0506I: Server name: mouda", 
+        "ADMU0506I: Server name: webserver1", 
+        "ADMU0508I: The Application Server \"mouda\" is STARTED", 
+        "ADMU0508I: The Web server \"webserver1\" is RUNNING"
+    ]
+}
+
+TASK [all-app-disk-mem-up : db state] **********************************************************************************************************************************
+changed: [mouda]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [mouda] => {
+    "db_op.stdout_lines": [
+        "09/17/2019 10:38:21     0   0   SQL1026N  The database manager is already active.", 
+        "SQL1026N  The database manager is already active."
+    ]
+}
+
+PLAY [all] *************************************************************************************************************************************************************
+
+TASK [all-app-disk-mem-up : mounts points of host] *********************************************************************************************************************
+changed: [tanda]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [tanda] => {
+    "disk_state.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs        94G  7.6G   86G   9% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   96K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.0G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/sda1                                       xfs       1.9G  132M  1.8G   7% /boot", 
+        "/dev/mapper/rootvg-var                          xfs        19G  5.3G   14G  29% /var", 
+        "/dev/mapper/rootvg-home                         xfs        19G   37M   19G   1% /home", 
+        "/dev/mapper/Datavg-tandacacheArea               xfs       750G   39G  712G   6% /tanda/cacheArea", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/Datavg-install                      xfs       200G   89G  112G  45% /install", 
+        "/dev/mapper/rootvg-tmp                          xfs        19G  105M   19G   1% /tmp", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T  109G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   77G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.3T  9.8T  19% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs        12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Uptime info of Host] ***********************************************************************************************************************
+changed: [tanda]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [tanda] => {
+    "up_op.stdout_lines": [
+        " 10:38:22 up 14 days, 18:08,  2 users,  load average: 1.68, 1.56, 1.64"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Memory info of Host] ***********************************************************************************************************************
+changed: [tanda]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [tanda] => {
+    "mem_op.stdout_lines": [
+        "              total        used        free      shared  buff/cache   available", 
+        "Mem:            125           5          77          22          42          97", 
+        "Swap:           119           0         119"
+    ]
+}
+
+TASK [all-app-disk-mem-up : application status] ************************************************************************************************************************
+changed: [tanda]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [tanda] => {
+    "app_status.stdout_lines": [
+        "ADMU0116I: Tool information is being logged in file", 
+        "           /install/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/serverStatus.log", 
+        "ADMU0128I: Starting tool with the AppSrv01 profile", 
+        "ADMU0503I: Retrieving server status for all servers", 
+        "ADMU0505I: Servers found in configuration:", 
+        "ADMU0506I: Server name: tanda", 
+        "ADMU0506I: Server name: webserver1", 
+        "ADMU0508I: The Application Server \"tanda\" is STARTED", 
+        "ADMU0508I: The Web server \"webserver1\" is RUNNING"
+    ]
+}
+
+TASK [all-app-disk-mem-up : db state] **********************************************************************************************************************************
+changed: [tanda]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [tanda] => {
+    "db_op.stdout_lines": [
+        "09/17/2019 10:38:28     0   0   SQL1026N  The database manager is already active.", 
+        "SQL1026N  The database manager is already active."
+    ]
+}
+
+PLAY [all] *************************************************************************************************************************************************************
+
+TASK [all-app-disk-mem-up : mounts points of host] *********************************************************************************************************************
+changed: [dadri]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [dadri] => {
+    "disk_state.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs        94G  8.4G   85G   9% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   88K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  1.5G   62G   3% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/sda1                                       xfs       1.9G  126M  1.8G   7% /boot", 
+        "/dev/mapper/Datavg-dadricacheArea               xfs       750G  7.4G  743G   1% /dadri/cacheArea", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/rootvg-tmp                          xfs        19G  225M   19G   2% /tmp", 
+        "/dev/mapper/Datavg-install                      xfs       200G  105G   96G  53% /install", 
+        "/dev/mapper/rootvg-home                         xfs        19G   69M   19G   1% /home", 
+        "/dev/mapper/rootvg-var                          xfs        19G  6.1G   13G  33% /var", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.3T  9.8T  19% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T  109G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   77G   12T   1% /ibm/fncss2/fncss2_fset1"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Uptime info of Host] ***********************************************************************************************************************
+changed: [dadri]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [dadri] => {
+    "up_op.stdout_lines": [
+        " 10:38:30 up 17:55,  2 users,  load average: 1.86, 1.47, 1.60"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Memory info of Host] ***********************************************************************************************************************
+changed: [dadri]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [dadri] => {
+    "mem_op.stdout_lines": [
+        "              total        used        free      shared  buff/cache   available", 
+        "Mem:            125           6          96          20          22          98", 
+        "Swap:           119           0         119"
+    ]
+}
+
+TASK [all-app-disk-mem-up : application status] ************************************************************************************************************************
+changed: [dadri]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [dadri] => {
+    "app_status.stdout_lines": [
+        "ADMU0116I: Tool information is being logged in file", 
+        "           /install/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/serverStatus.log", 
+        "ADMU0128I: Starting tool with the AppSrv01 profile", 
+        "ADMU0503I: Retrieving server status for all servers", 
+        "ADMU0505I: Servers found in configuration:", 
+        "ADMU0506I: Server name: dadri", 
+        "ADMU0506I: Server name: webserver1", 
+        "ADMU0508I: The Application Server \"dadri\" is STARTED", 
+        "ADMU0508I: The Web server \"webserver1\" is RUNNING"
+    ]
+}
+
+TASK [all-app-disk-mem-up : db state] **********************************************************************************************************************************
+changed: [dadri]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [dadri] => {
+    "db_op.stdout_lines": [
+        "09/17/2019 10:38:38     0   0   SQL1026N  The database manager is already active.", 
+        "SQL1026N  The database manager is already active."
+    ]
+}
+
+PLAY [all] *************************************************************************************************************************************************************
+
+TASK [all-app-disk-mem-up : mounts points of host] *********************************************************************************************************************
+changed: [vindhyachal]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [vindhyachal] => {
+    "disk_state.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs        94G   11G   83G  12% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   92K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.1G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/Datavg-vindhyachalcacheArea         xfs       750G   59G  692G   8% /vindhyachal/cacheArea", 
+        "/dev/mapper/Datavg-install                      xfs       200G   55G  146G  28% /install", 
+        "/dev/sda1                                       xfs       1.9G  132M  1.8G   7% /boot", 
+        "/dev/mapper/rootvg-tmp                          xfs        19G  167M   19G   1% /tmp", 
+        "/dev/mapper/rootvg-home                         xfs        19G   38M   19G   1% /home", 
+        "/dev/mapper/rootvg-var                          xfs        19G  6.7G   12G  36% /var", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs4       12T  109G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs4       12T   77G   12T   1% /ibm/fncss2/fncss2_fset1", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs4       12T  2.3T  9.8T  19% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs4       12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs4       12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs4       12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Uptime info of Host] ***********************************************************************************************************************
+changed: [vindhyachal]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [vindhyachal] => {
+    "up_op.stdout_lines": [
+        " 10:38:40 up 51 days, 20:54,  2 users,  load average: 14.28, 13.09, 12.01"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Memory info of Host] ***********************************************************************************************************************
+changed: [vindhyachal]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [vindhyachal] => {
+    "mem_op.stdout_lines": [
+        "              total        used        free      shared  buff/cache   available", 
+        "Mem:            125          17          23          22          85          84", 
+        "Swap:           119           0         119"
+    ]
+}
+
+TASK [all-app-disk-mem-up : application status] ************************************************************************************************************************
+changed: [vindhyachal]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [vindhyachal] => {
+    "app_status.stdout_lines": [
+        "ADMU0116I: Tool information is being logged in file", 
+        "           /install/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/serverStatus.log", 
+        "ADMU0128I: Starting tool with the AppSrv01 profile", 
+        "ADMU0503I: Retrieving server status for all servers", 
+        "ADMU0505I: Servers found in configuration:", 
+        "ADMU0506I: Server name: vidyanchal", 
+        "ADMU0506I: Server name: webserver1", 
+        "ADMU0508I: The Application Server \"vidyanchal\" is STARTED", 
+        "ADMU0508I: The Web server \"webserver1\" is RUNNING"
+    ]
+}
+
+TASK [all-app-disk-mem-up : db state] **********************************************************************************************************************************
+changed: [vindhyachal]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [vindhyachal] => {
+    "db_op.stdout_lines": [
+        "09/17/2019 10:38:47     0   0   SQL1026N  The database manager is already active.", 
+        "SQL1026N  The database manager is already active."
+    ]
+}
+
+PLAY [all] *************************************************************************************************************************************************************
+
+TASK [all-app-disk-mem-up : mounts points of host] *********************************************************************************************************************
+changed: [unchar]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [unchar] => {
+    "disk_state.stdout_lines": [
+        "Filesystem                                      Type      Size  Used Avail Use% Mounted on", 
+        "/dev/mapper/rootvg-root                         xfs        94G  8.2G   85G   9% /", 
+        "devtmpfs                                        devtmpfs   63G     0   63G   0% /dev", 
+        "tmpfs                                           tmpfs      63G   92K   63G   1% /dev/shm", 
+        "tmpfs                                           tmpfs      63G  4.1G   59G   7% /run", 
+        "tmpfs                                           tmpfs      63G     0   63G   0% /sys/fs/cgroup", 
+        "/dev/loop0                                      iso9660   3.7G  3.7G     0 100% /mnt", 
+        "/dev/sda1                                       xfs       1.9G  131M  1.8G   7% /boot", 
+        "/dev/mapper/rootvg-home                         xfs        19G   36M   19G   1% /home", 
+        "/dev/mapper/Datavg-unchaharcacheArea            xfs       750G   11G  739G   2% /unchahar/cacheArea", 
+        "/dev/mapper/Datavg-install                      xfs       200G  112G   89G  56% /install", 
+        "/dev/mapper/Datavg-archlogs                     xfs        50G   33M   50G   1% /archlogs", 
+        "/dev/mapper/rootvg-var                          xfs        19G  4.3G   15G  23% /var", 
+        "/dev/mapper/rootvg-tmp                          xfs        19G  105M   19G   1% /tmp", 
+        "10.3.0.154:/ibm/fnfilestore1/fnfilestore1_fset1 nfs        12T  2.3T  9.8T  19% /ibm/fnfilestore1/fnfilestore1_fset1", 
+        "10.3.0.153:/ibm/fnfilestore5/fnfilestore5_fset1 nfs        12T  190G   12T   2% /ibm/fnfilestore5/fnfilestore5_fset1", 
+        "10.3.0.155:/ibm/fnfilestore3/fnfilestore3_fset1 nfs        12T   78G   12T   1% /ibm/fnfilestore3/fnfilestore3_fset1", 
+        "10.3.0.153:/ibm/fncss1/fncss1_fset1             nfs        12T  109G   12T   1% /ibm/fncss1/fncss1_fset1", 
+        "10.3.0.155:/ibm/fnfilestore4/fnfilestore4_fset1 nfs        12T   45G   12T   1% /ibm/fnfilestore4/fnfilestore4_fset1", 
+        "10.3.0.154:/ibm/fnfilestore2/fnfilestore2_fset1 nfs        12T   45G   12T   1% /ibm/fnfilestore2/fnfilestore2_fset1", 
+        "10.3.0.153:/ibm/fncss2/fncss2_fset1             nfs        12T   77G   12T   1% /ibm/fncss2/fncss2_fset1"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Uptime info of Host] ***********************************************************************************************************************
+changed: [unchar]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [unchar] => {
+    "up_op.stdout_lines": [
+        " 10:38:49 up 139 days, 23:50,  2 users,  load average: 2.12, 2.22, 1.83"
+    ]
+}
+
+TASK [all-app-disk-mem-up : Memory info of Host] ***********************************************************************************************************************
+changed: [unchar]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [unchar] => {
+    "mem_op.stdout_lines": [
+        "              total        used        free      shared  buff/cache   available", 
+        "Mem:            125          12          12          22         100          89", 
+        "Swap:           119           0         119"
+    ]
+}
+
+TASK [all-app-disk-mem-up : application status] ************************************************************************************************************************
+changed: [unchar]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [unchar] => {
+    "app_status.stdout_lines": [
+        "ADMU0116I: Tool information is being logged in file", 
+        "           /install/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/serverStatus.log", 
+        "ADMU0128I: Starting tool with the AppSrv01 profile", 
+        "ADMU0503I: Retrieving server status for all servers", 
+        "ADMU0505I: Servers found in configuration:", 
+        "ADMU0506I: Server name: Unchahar", 
+        "ADMU0506I: Server name: webserver1", 
+        "ADMU0508I: The Application Server \"Unchahar\" is STARTED", 
+        "ADMU0508I: The Web server \"webserver1\" is RUNNING"
+    ]
+}
+
+TASK [all-app-disk-mem-up : db state] **********************************************************************************************************************************
+changed: [unchar]
+
+TASK [all-app-disk-mem-up : debug] *************************************************************************************************************************************
+ok: [unchar] => {
+    "db_op.stdout_lines": [
+        "09/17/2019 10:38:56     0   0   SQL1026N  The database manager is already active.", 
+        "SQL1026N  The database manager is already active."
+    ]
+}
+
+PLAY RECAP *************************************************************************************************************************************************************
+barh                       : ok=10   changed=5    unreachable=0    failed=0   
+bongaigaon                 : ok=10   changed=5    unreachable=0    failed=0   
+dadri                      : ok=10   changed=5    unreachable=0    failed=0   
+faridabad                  : ok=10   changed=5    unreachable=0    failed=0   
+frrka                      : ok=10   changed=5    unreachable=0    failed=0   
+khalegaon                  : ok=10   changed=5    unreachable=0    failed=0   
+kodgi                      : ok=10   changed=5    unreachable=0    failed=0   
+korba                      : ok=10   changed=5    unreachable=0    failed=0   
+mouda                      : ok=10   changed=5    unreachable=0    failed=0   
+netra                      : ok=10   changed=5    unreachable=0    failed=0   
+ramagundam                 : ok=10   changed=5    unreachable=0    failed=0   
+rihand                     : ok=10   changed=5    unreachable=0    failed=0   
+scope                      : ok=10   changed=5    unreachable=0    failed=0   
+simhadri                   : ok=10   changed=5    unreachable=0    failed=0   
+singruali                  : ok=10   changed=5    unreachable=0    failed=0   
+sipat                      : ok=10   changed=5    unreachable=0    failed=0   
+solapur                    : ok=10   changed=5    unreachable=0    failed=0   
+talcher                    : ok=10   changed=5    unreachable=0    failed=0   
+tanda                      : ok=10   changed=5    unreachable=0    failed=0   
+unchar                     : ok=10   changed=5    unreachable=0    failed=0   
+vindhyachal                : ok=10   changed=5    unreachable=0    failed=0   

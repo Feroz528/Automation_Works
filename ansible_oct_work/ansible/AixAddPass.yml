@@ -1,0 +1,18 @@
+---
+- user: root_EB
+  become: yes
+  hosts: all
+  gather_facts: no
+  become_method: sudo
+  vars:
+    p1: "$5$sha-512$TDRave2xoui7xcCuYOGZ0kJ5QrpF0Q8GetCUPDaKN1A"
+  tasks: 
+   - name: new password
+     shell: "sudo echo root_EB:'P@SSW0RD'|sudo chpasswd"
+     #user: 
+     #  name: blue
+      # update_password: on_create
+      # password: "{{ p1 }}" 
+   - name: no expire
+     command: pwdadm -c root_EB
+

@@ -1,0 +1,8 @@
+---
+- name: application server starting
+  command: "{{ app_root_path }}/bin/{{ __script_to_start }} {{ app_server }}"
+  register: all2
+  tags: all2
+- name: application start status
+  debug: 
+        var: all2.stdout_lines

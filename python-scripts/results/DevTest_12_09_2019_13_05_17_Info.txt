@@ -1,0 +1,358 @@
+
+PLAY [dev_test] ********************************************************************************************************************************************************
+
+TASK [dc-role : hostname] **********************************************************************************************************************************************
+changed: [master]
+fatal: [ecmtestapp]: FAILED! => {"changed": false, "module_stderr": "Shared connection to ecmtestapp closed.\r\n", "module_stdout": "sudo: a password is required\r\n", "msg": "MODULE FAILURE", "rc": 1}
+changed: [ecmdevapp]
+changed: [bpmdevapp]
+changed: [bpmdevdb]
+changed: [bpmtestapp]
+changed: [ecmdevdb]
+changed: [ecmtestdb]
+changed: [bpmtestdb]
+fatal: [10.3.0.114]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '10.3.0.114' (ECDSA) to the list of known hosts.\r\nPermission denied (publickey,password,keyboard-interactive).\r\n", "unreachable": true}
+
+TASK [dc-role : Mount Points] ******************************************************************************************************************************************
+fatal: [master]: FAILED! => {"changed": true, "cmd": ["df", "-g"], "delta": "0:00:00.002539", "end": "2019-09-12 13:05:03.788646", "msg": "non-zero return code", "rc": 1, "start": "2019-09-12 13:05:03.786107", "stderr": "df: invalid option -- 'g'\nTry 'df --help' for more information.", "stderr_lines": ["df: invalid option -- 'g'", "Try 'df --help' for more information."], "stdout": "", "stdout_lines": []}
+changed: [bpmdevdb]
+changed: [bpmdevapp]
+changed: [ecmdevdb]
+changed: [ecmdevapp]
+changed: [bpmtestapp]
+changed: [bpmtestdb]
+changed: [ecmtestdb]
+
+TASK [dc-role : debug] *************************************************************************************************************************************************
+ok: [bpmdevapp] => {
+    "r1.stdout_lines": [
+        "Filesystem    GB blocks      Free %Used    Iused %Iused Mounted on", 
+        "/dev/hd4           5.50      0.21   97%    12954    21% /", 
+        "/dev/hd2           7.25      4.80   34%    38315     4% /usr", 
+        "/dev/hd9var        5.25      5.07    4%     2415     1% /var", 
+        "/dev/hd3          10.25      7.37   29%     4740     1% /tmp", 
+        "/dev/hd1           5.25      4.56   14%       67     1% /home", 
+        "/dev/hd11admin      0.25      0.25    1%        5     1% /admin", 
+        "/proc                 -         -    -        -      - /proc", 
+        "/dev/hd10opt      20.00     18.30    9%    19855     1% /opt", 
+        "/dev/livedump      0.25      0.25    1%        4     1% /var/adm/ras/livedump", 
+        "/dev/fslv00      175.00     67.87   62%   288292     2% /install", 
+        "/dev/fslv01       25.00     24.87    1%        4     1% /apptranlog", 
+        "/dev/nmonlv        0.75      0.29   62%      373     1% /var/nmon", 
+        "/dev/fslv02      349.00    259.39   26%   319036     1% /install_r", 
+        "/dev/fslv03        5.00      3.05   40%     2399     1% /temptest", 
+        "/dev/fslv04        0.50      0.50    1%        4     1% /temptest1", 
+        "/dev/fslv05        9.75      9.75    1%        4     1% /sanovi_install"
+    ]
+}
+ok: [bpmdevdb] => {
+    "r1.stdout_lines": [
+        "Filesystem    GB blocks      Free %Used    Iused %Iused Mounted on", 
+        "/dev/hd4           5.00      1.27   75%    12731     5% /", 
+        "/dev/hd2           5.00      2.51   50%    38321     7% /usr", 
+        "/dev/hd9var        5.00      4.53   10%     1028     1% /var", 
+        "/dev/hd3          10.00      7.08   30%     7428     1% /tmp", 
+        "/dev/hd1           5.00      5.00    1%       69     1% /home", 
+        "/dev/hd11admin      0.25      0.25    1%        5     1% /admin", 
+        "/proc                 -         -    -        -      - /proc", 
+        "/dev/hd10opt       5.00      4.24   16%    17780     2% /opt", 
+        "/dev/livedump      0.25      0.25    1%        4     1% /var/adm/ras/livedump", 
+        "/dev/fslv00      200.00     87.86   57%     1519     1% /data", 
+        "/dev/fslv01      100.00     24.78   76%    22198     1% /archlogs", 
+        "/dev/fslv02       25.00     20.91   17%      380     1% /instance", 
+        "/dev/fslv03       25.00      9.69   62%     7515     1% /install", 
+        "/dev/nmonlv        0.75      0.33   57%      372     1% /var/nmon", 
+        "/dev/fslv04        9.75      8.36   15%     2351     1% /sanovi_install", 
+        "10.3.0.114:/db_backup     199.00     49.59   76%      215     1% /db_backup"
+    ]
+}
+ok: [ecmdevapp] => {
+    "r1.stdout_lines": [
+        "Filesystem    GB blocks      Free %Used    Iused %Iused Mounted on", 
+        "/dev/hd4           5.50      1.20   79%    12097     5% /", 
+        "/dev/hd2           7.25      4.66   36%    39161     4% /usr", 
+        "/dev/hd9var        5.25      4.97    6%     1969     1% /var", 
+        "/dev/hd3          10.25      3.53   66%     8807     2% /tmp", 
+        "/dev/hd1           5.25      5.25    1%       79     1% /home", 
+        "/dev/hd11admin      0.25      0.25    1%        5     1% /admin", 
+        "/proc                 -         -    -        -      - /proc", 
+        "/dev/hd10opt       5.00      3.67   27%    17767     3% /opt", 
+        "/dev/livedump      0.25      0.25    1%        4     1% /var/adm/ras/livedump", 
+        "/dev/fslv00      175.00     71.51   60%   296206     2% /install", 
+        "/dev/fslv01       25.00     24.87    1%        4     1% /apptranlog", 
+        "/dev/nmonlv        0.50      0.03   95%      373     6% /var/nmon", 
+        "/dev/fslv02      349.00    240.38   32%   409220     1% /install_r", 
+        "/dev/fslv03        9.75      8.81   10%     2254     1% /sanovi_install", 
+        "/dev/SANOVI_TEST_NSD_DC     20.00     18.36    9%     4052     3% /ibm/SANOVI_TEST", 
+        "/dev/WCM_PORTAL_DC   1024.00   1020.37    1%     4049     1% /ibm/WCM_PORTAL", 
+        "/dev/cesshared      5.00      1.39   73%     4273     5% /ibm/cesshared", 
+        "/dev/filestore_DC_ECMdev   1200.00   1150.25    5%   105800     1% /ibm/filestore_ECMdev"
+    ]
+}
+ok: [ecmdevdb] => {
+    "r1.stdout_lines": [
+        "Filesystem    GB blocks      Free %Used    Iused %Iused Mounted on", 
+        "/dev/hd4           5.50      2.34   58%    12721     3% /", 
+        "/dev/hd2           7.25      4.76   35%    38322     4% /usr", 
+        "/dev/hd9var        5.25      5.03    5%     1021     1% /var", 
+        "/dev/hd3          10.25      7.28   29%     5237     1% /tmp", 
+        "/dev/hd1           5.25      5.25    1%       59     1% /home", 
+        "/dev/hd11admin      0.25      0.25    1%        5     1% /admin", 
+        "/proc                 -         -    -        -      - /proc", 
+        "/dev/hd10opt       5.00      4.23   16%    17782     2% /opt", 
+        "/dev/livedump      0.25      0.25    1%        4     1% /var/adm/ras/livedump", 
+        "/dev/fslv00      200.00    180.49   10%     4553     1% /data", 
+        "/dev/fslv01      100.00     32.30   68%    17896     1% /archlogs", 
+        "/dev/fslv02       25.00     20.97   17%      286     1% /instance", 
+        "/dev/fslv03       25.00      6.72   74%     9350     1% /install", 
+        "/dev/nmonlv        0.75      0.37   52%      372     1% /var/nmon", 
+        "/dev/fslv04        9.75      8.46   14%     2315     1% /sanovi_install", 
+        "10.3.0.114:/db_backup     199.00     49.59   76%      215     1% /db_backup"
+    ]
+}
+ok: [bpmtestapp] => {
+    "r1.stdout_lines": [
+        "Filesystem    GB blocks      Free %Used    Iused %Iused Mounted on", 
+        "/dev/hd4           5.00      4.55    9%    12368     2% /", 
+        "/dev/hd2           5.00      2.55   49%    38322     7% /usr", 
+        "/dev/hd9var        5.00      4.76    5%     2367     1% /var", 
+        "/dev/hd3          10.00      6.67   34%     4520     1% /tmp", 
+        "/dev/hd1           5.00      3.98   21%      209     1% /home", 
+        "/dev/hd11admin      0.25      0.25    1%        5     1% /admin", 
+        "/proc                 -         -    -        -      - /proc", 
+        "/dev/hd10opt       5.00      3.05   40%    21421     3% /opt", 
+        "/dev/livedump      0.25      0.25    1%        4     1% /var/adm/ras/livedump", 
+        "/dev/fslv00      175.00     28.40   84%   250607     4% /install", 
+        "/dev/fslv01       25.00     24.87    1%        4     1% /apptranlog", 
+        "/dev/nmonlv        0.75      0.30   60%      373     1% /var/nmon", 
+        "/dev/fslv02        9.75      8.77   11%     2260     1% /sanovi_install", 
+        "/dev/fslv03       10.00      4.67   54%     5109     1% /install_test"
+    ]
+}
+ok: [bpmtestdb] => {
+    "r1.stdout_lines": [
+        "Filesystem    GB blocks      Free %Used    Iused %Iused Mounted on", 
+        "/dev/hd4          10.00      3.51   65%    12756     2% /", 
+        "/dev/hd2          10.00      1.73   83%    38212     9% /usr", 
+        "/dev/hd9var       10.00      8.82   12%     1457     1% /var", 
+        "/dev/hd3          20.00      8.86   56%     6272     1% /tmp", 
+        "/dev/hd1          10.00     10.00    1%       41     1% /home", 
+        "/dev/hd11admin      0.25      0.25    1%        5     1% /admin", 
+        "/proc                 -         -    -        -      - /proc", 
+        "/dev/hd10opt       5.00      4.16   17%    17948     2% /opt", 
+        "/dev/livedump      0.25      0.25    1%        4     1% /var/adm/ras/livedump", 
+        "/dev/fslv00      400.00    134.35   67%     1197     1% /data", 
+        "/dev/fslv01      250.00    117.63   53%     8864     1% /archlogs", 
+        "/dev/fslv02      100.00     89.71   11%      574     1% /instance", 
+        "/dev/fslv03       25.00      5.43   79%     9146     1% /install", 
+        "/dev/nmonlv        0.75      0.35   53%      367     1% /var/nmon", 
+        "/dev/fslv04        9.75      8.61   12%     2339     1% /sanovi_install"
+    ]
+}
+ok: [ecmtestdb] => {
+    "r1.stdout_lines": [
+        "Filesystem    GB blocks      Free %Used    Iused %Iused Mounted on", 
+        "/dev/hd4           5.50      5.16    7%    12740     2% /", 
+        "/dev/hd2           7.25      4.77   35%    38512     4% /usr", 
+        "/dev/hd9var        5.25      5.00    5%     1364     1% /var", 
+        "/dev/hd3          10.25      6.43   38%    23193     2% /tmp", 
+        "/dev/hd1           5.25      5.25    1%       51     1% /home", 
+        "/dev/hd11admin      0.25      0.25    1%        5     1% /admin", 
+        "/proc                 -         -    -        -      - /proc", 
+        "/dev/hd10opt       5.00      3.83   24%    21001     3% /opt", 
+        "/dev/livedump      0.25      0.25    1%        4     1% /var/adm/ras/livedump", 
+        "/dev/fslv00      200.00    192.73    4%     1235     1% /data", 
+        "/dev/fslv01      100.00     38.32   62%    15263     1% /archlogs", 
+        "/dev/fslv02       25.00     15.38   39%      534     1% /instance", 
+        "/dev/fslv03       25.00     11.01   56%     7280     1% /install", 
+        "/dev/nmonlv        0.75      0.41   46%      348     1% /var/nmon", 
+        "/dev/fslv04        9.75      8.77   11%     2281     1% /sanovi_install"
+    ]
+}
+
+TASK [dc-role : Memory Info] *******************************************************************************************************************************************
+changed: [bpmdevdb]
+changed: [ecmdevapp]
+changed: [ecmdevdb]
+changed: [bpmtestapp]
+changed: [bpmdevapp]
+changed: [bpmtestdb]
+changed: [ecmtestdb]
+
+TASK [dc-role : debug] *************************************************************************************************************************************************
+ok: [bpmdevapp] => {
+    "r2.stdout_lines": [
+        "Unit: GB", 
+        "--------------------------------------------------------------------------------------", 
+        "               size       inuse        free         pin     virtual  available   mmode", 
+        "memory         48.0        46.2        1.82        8.35        23.0       23.5     Ded", 
+        "pg space       48.0        0.06", 
+        "", 
+        "               work        pers        clnt       other", 
+        "pin            6.68           0        0.01        1.66", 
+        "in use         23.0           0        23.2"
+    ]
+}
+ok: [ecmdevapp] => {
+    "r2.stdout_lines": [
+        "Unit: GB", 
+        "--------------------------------------------------------------------------------------", 
+        "               size       inuse        free         pin     virtual  available   mmode", 
+        "memory         96.0        94.2        1.82        31.1        35.3       57.6     Ded", 
+        "pg space       47.5        0.08", 
+        "", 
+        "               work        pers        clnt       other", 
+        "pin            28.1           0        0.01        3.03", 
+        "in use         35.3           0        58.9"
+    ]
+}
+ok: [bpmdevdb] => {
+    "r2.stdout_lines": [
+        "Unit: GB", 
+        "--------------------------------------------------------------------------------------", 
+        "               size       inuse        free         pin     virtual  available   mmode", 
+        "memory         16.0        15.3        0.74        3.74        11.4       4.20     Ded", 
+        "pg space       32.0        0.33", 
+        "", 
+        "               work        pers        clnt       other", 
+        "pin            2.98           0        0.01        0.75", 
+        "in use         11.1           0        4.14"
+    ]
+}
+ok: [ecmdevdb] => {
+    "r2.stdout_lines": [
+        "Unit: GB", 
+        "--------------------------------------------------------------------------------------", 
+        "               size       inuse        free         pin     virtual  available   mmode", 
+        "memory         16.0        16.0        0.02        3.54        12.4       2.89     Ded", 
+        "pg space       32.0        0.04", 
+        "", 
+        "               work        pers        clnt       other", 
+        "pin            2.77           0        0.01        0.75", 
+        "in use         12.4           0        3.54"
+    ]
+}
+ok: [bpmtestapp] => {
+    "r2.stdout_lines": [
+        "Unit: GB", 
+        "--------------------------------------------------------------------------------------", 
+        "               size       inuse        free         pin     virtual  available   mmode", 
+        "memory         48.0        45.0        2.98        6.90        16.5       29.9     Ded", 
+        "pg space       47.5        0.04", 
+        "", 
+        "               work        pers        clnt       other", 
+        "pin            5.23           0        0.01        1.66", 
+        "in use         16.5           0        28.6"
+    ]
+}
+ok: [bpmtestdb] => {
+    "r2.stdout_lines": [
+        "Unit: GB", 
+        "--------------------------------------------------------------------------------------", 
+        "               size       inuse        free         pin     virtual  available   mmode", 
+        "memory         16.0        15.9        0.06        3.29        11.6       3.71     Ded", 
+        "pg space       32.0        0.04", 
+        "", 
+        "               work        pers        clnt       other", 
+        "pin            2.52           0        0.01        0.75", 
+        "in use         11.6           0        4.35"
+    ]
+}
+ok: [ecmtestdb] => {
+    "r2.stdout_lines": [
+        "Unit: GB", 
+        "--------------------------------------------------------------------------------------", 
+        "               size       inuse        free         pin     virtual  available   mmode", 
+        "memory         66.0        37.8        28.2        8.27        21.8       42.5     Ded", 
+        "pg space       32.0        0.19", 
+        "", 
+        "               work        pers        clnt       other", 
+        "pin            6.01           0        0.01        2.24", 
+        "in use         21.5           0        16.2"
+    ]
+}
+
+TASK [dc-role : Uptime of Host] ****************************************************************************************************************************************
+changed: [bpmdevapp]
+changed: [bpmdevdb]
+changed: [ecmdevapp]
+changed: [ecmdevdb]
+changed: [bpmtestapp]
+changed: [bpmtestdb]
+changed: [ecmtestdb]
+
+TASK [dc-role : debug] *************************************************************************************************************************************************
+ok: [bpmdevapp] => {
+    "r3.stdout_lines": [
+        "  12:59PM   up 107 days,   3:11,  2 users,  load average: 2.43, 3.32, 4.06"
+    ]
+}
+ok: [bpmdevdb] => {
+    "r3.stdout_lines": [
+        "  12:59PM   up 452 days,  23:12,  1 user,  load average: 4.12, 3.51, 3.08"
+    ]
+}
+ok: [ecmdevapp] => {
+    "r3.stdout_lines": [
+        "  12:59PM   up 107 days,   3:11,  8 users,  load average: 2.80, 2.92, 2.98"
+    ]
+}
+ok: [ecmdevdb] => {
+    "r3.stdout_lines": [
+        "  12:59PM   up 452 days,  23:10,  1 user,  load average: 2.94, 4.26, 3.94"
+    ]
+}
+ok: [bpmtestapp] => {
+    "r3.stdout_lines": [
+        "  12:59PM   up 107 days,  22:05,  2 users,  load average: 3.06, 4.14, 4.69"
+    ]
+}
+ok: [bpmtestdb] => {
+    "r3.stdout_lines": [
+        "  12:59PM   up 170 days,   4:46,  1 user,  load average: 2.67, 2.75, 3.03"
+    ]
+}
+ok: [ecmtestdb] => {
+    "r3.stdout_lines": [
+        "  12:59PM   up 72 days,  20:57,  1 user,  load average: 1.76, 3.06, 3.21"
+    ]
+}
+
+TASK [dc-role : output of r1] ******************************************************************************************************************************************
+changed: [bpmtestapp]
+changed: [bpmdevapp]
+changed: [ecmdevdb]
+changed: [ecmdevapp]
+changed: [bpmdevdb]
+changed: [bpmtestdb]
+changed: [ecmtestdb]
+
+TASK [dc-role : output of r2] ******************************************************************************************************************************************
+changed: [bpmdevapp]
+changed: [bpmtestapp]
+changed: [bpmdevdb]
+changed: [ecmdevdb]
+changed: [ecmdevapp]
+changed: [bpmtestdb]
+changed: [ecmtestdb]
+
+TASK [dc-role : output of r3] ******************************************************************************************************************************************
+changed: [bpmdevdb]
+changed: [ecmdevapp]
+changed: [bpmtestapp]
+changed: [ecmdevdb]
+changed: [bpmdevapp]
+changed: [bpmtestdb]
+changed: [ecmtestdb]
+
+PLAY RECAP *************************************************************************************************************************************************************
+10.3.0.114                 : ok=0    changed=0    unreachable=1    failed=0   
+bpmdevapp                  : ok=10   changed=7    unreachable=0    failed=0   
+bpmdevdb                   : ok=10   changed=7    unreachable=0    failed=0   
+bpmtestapp                 : ok=10   changed=7    unreachable=0    failed=0   
+bpmtestdb                  : ok=10   changed=7    unreachable=0    failed=0   
+ecmdevapp                  : ok=10   changed=7    unreachable=0    failed=0   
+ecmdevdb                   : ok=10   changed=7    unreachable=0    failed=0   
+ecmtestapp                 : ok=0    changed=0    unreachable=0    failed=1   
+ecmtestdb                  : ok=10   changed=7    unreachable=0    failed=0   
+master                     : ok=1    changed=1    unreachable=0    failed=1   

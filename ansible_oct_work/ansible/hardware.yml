@@ -1,0 +1,22 @@
+---
+- hosts: all
+  user: root_EB
+  become: yes
+  gather_facts: yes
+  tasks:
+   - name: hostname of machine
+     command: hostname
+     register: name
+   - name: serial number of host
+     shell: dmidecode -t system |grep -i serial
+     register: serial
+   - name: os version
+     command: cat /etc/redhat-release
+     register: redhat
+   - name: hostname
+     debug: var=name.stdout_lines
+   - name: serial
+     debug: var=serial.stdout_lines
+   - name: os version
+     debug: var=redhat.stdout_lines
+

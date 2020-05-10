@@ -1,0 +1,11 @@
+---
+- hosts: aix
+  user: root_EB
+  become: no
+  gather_facts: no
+  tasks: 
+   - name: disk size
+     command: df -gt
+     register: df
+   - debug: var=df.stdout_lines
+
