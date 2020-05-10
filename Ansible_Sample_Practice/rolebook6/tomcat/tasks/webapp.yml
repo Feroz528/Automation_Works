@@ -1,0 +1,7 @@
+---
+- name: deploying project
+  template: src=webapp.war dest=/usr/local/tomcat/apache-tomcat-7.0.85/webapps/webit/
+  tags:
+  - deploy
+  notify: 
+  - restart tomcat  

@@ -1,0 +1,7 @@
+---
+- hosts: devils-group
+  user: test 
+  sudo: yes
+  connection: ssh
+  roles:
+   - keycop 

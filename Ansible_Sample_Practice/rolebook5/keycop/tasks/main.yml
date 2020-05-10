@@ -1,0 +1,14 @@
+---
+- name: creating user
+  user: name=test5
+        group=test5
+        state=present 
+- name: generating ssh-key
+  user: user=test5
+        name=generate_ssh_key
+        state=present
+- name: copying ssh key to host servers
+  authorized_key: user=test5
+                  state=present
+                  key={{lookup('file','/home/test/.ssh/id_rsa.pub')}}
+ 

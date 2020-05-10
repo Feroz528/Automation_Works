@@ -1,0 +1,11 @@
+---
+- hosts: server2.sf.com
+  user: test
+  sudo: yes
+  tasks: 
+  - name: root log
+    user: name=root
+          command:
+          - shell =su - root 
+          state=absent
+

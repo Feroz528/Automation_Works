@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  user: root
+  become: yes
+  vars:
+      password: '$5$MD5$cCoktOz/MlZIWyzpyU3Ztoek10ClevvBMmtFXyQrVY9'
+      username: 'fz'
+  tasks:
+    - name: users creation
+      user: name={{ username }}
+            password={{ password }}
+            shell=/bin/bash
+            state=present

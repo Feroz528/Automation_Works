@@ -1,0 +1,6 @@
+---
+- user: test
+  become: yes 
+  tasks:
+  - name: stop tomcat
+    command: nohup /usr/local/tomcat/apache-tomcat 

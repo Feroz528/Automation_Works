@@ -1,0 +1,9 @@
+---
+- hosts: server2.sf.com
+  user: test
+  sudo: yes
+  gather_facts: yes
+  tasks:
+  - name: copying template
+    template: src=ssh_conf.j2 dest=/tmp/abc/
+

@@ -1,0 +1,19 @@
+---
+- hosts: server2.sf.com
+  user: test
+  sudo: yes
+  vars:
+    var1: curl
+  vars_files:
+    - abc.yml
+  vars_prompt:
+    - prompt: Enter var name 
+      name: var3
+      private: yes
+  tasks:
+  - name: installing a package through variables
+    yum: name={{var1}} state=installed
+  - name: installing a package external variables
+    yum: name={{var2}} state=installed
+  - name: installing a package runtime variables
+    yum: name={{var3}} state=installed 

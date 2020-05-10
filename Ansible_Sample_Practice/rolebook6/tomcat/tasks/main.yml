@@ -1,0 +1,31 @@
+---
+- name: installing java 1.7
+  yum: name=java-1.7.0-openjdk state=present
+  tags:
+  - javadown
+- name: creating a directory
+  file: name=/usr/local/tomcat state=directory
+  tags:
+  - dir
+- name: downloading tomcat
+  get_url: url=http://www-eu.apache.org/dist/tomcat/tomcat-7/v7.0.85/bin/apache-tomcat-7.0.85.tar.gz dest=/usr/local/tomcat/
+  tags:
+  - tomcatdown
+- name: extracting tar file
+  unarchive: src=/usr/local/tomcat/apache-tomcat-7.0.85.tar.gz dest=/usr/local/tomcat/ remote_src=yes
+  tags:
+  - unziptomcat
+- name: configure Tomcat users
+  template: src=tomcat-users.xml.j2 dest=/usr/local/tomcat/apache-tomcat-7.0.85/conf/tomcat-users.xml 
+  tags:
+  - copy
+- include: webapp.yml
+  tags: webdeploy
+- name: start tomcat
+  command: nohup /usr/local/tomcat/apache-tomcat-7.0.85/bin/catalina.sh stop
+  tags:
+  - starttomcat
+  notify:
+  - restart tomcat
+
+

@@ -1,0 +1,5 @@
+---
+- name: installing httpd
+  yum: name={{ var1 }} state=latest
+- include: copy.yml
+    

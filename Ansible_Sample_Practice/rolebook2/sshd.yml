@@ -1,0 +1,6 @@
+---
+- hosts: server2.sf.com
+  user: test
+  sudo: yes
+  roles:
+    - sshd 

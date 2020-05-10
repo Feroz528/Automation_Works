@@ -1,0 +1,4 @@
+---
+- name: start httpd
+  service: name={{ var1 }} state=started
+

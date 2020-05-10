@@ -1,0 +1,13 @@
+---
+- hosts: server2.sf.com
+  user: test
+  sudo: yes
+  tasks:
+  - name: installing packages through loops
+    yum: name={{item}} state=installed
+    with_items:
+      - httpd
+      - curl
+      - gedit
+      - vim
+

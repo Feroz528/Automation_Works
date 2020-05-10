@@ -1,0 +1,13 @@
+---
+- hosts: server3.sf.com
+  user: test
+  sudo: yes
+  connection: ssh
+  tasks:
+  - name: installing httpd package
+    apt: name=httpd state=installed
+  - name: copying index file
+    copy: src=index.html dest=/var/www/html/index.html
+  - name: starting httpd service
+    service: name=httpd state=restarted
+ 

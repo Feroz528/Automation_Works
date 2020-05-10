@@ -1,0 +1,6 @@
+---
+- name: copying files
+  copy: src=index.html
+        dest=/var/www/html/    
+  notify:
+   - start httpd  

@@ -1,0 +1,33 @@
+---
+- name: adding users
+  hosts: all
+  user: root_EB
+  become: yes
+  become_method: sudo
+  gather_facts: yes
+  vars:
+    u_name: 'user1'
+    u_passwd: '$5$sha-512$DILqRpCCEoU53t2JKCtN8Bnyi79/IiGHR4J5f4PI5L2'
+  tasks:
+   - name: creating user
+     user:
+      name: "{{ u_name }}"
+      password: "{{ u_passwd }}"
+      #generate_ssh_key: yes
+      shell: /bin/bash
+      state: present
+   - name: create .ssh dir
+     file:
+      path: "/home/{{ u_name }}/.ssh"
+      state: directory
+      owner: "{{ u_name }}"
+      mode: 0700
+   - name: touch authorized file
+     file:
+      path: "/home/{{ u_name }}/.ssh/authorized_keys"
+      state: touch
+   - name: copying pub key file
+     lineinfile:
+      path: "/home/{{ u_name }}/.ssh/authorized_keys"
+      line: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6Nr8sFnILURUtv2CMT7Rpe1EZcPEdgOPGUccigMvMyTyhaHmSKgSyWQS0+i+IoxM9BlibLFMSCPYjnOh3pVVVVFBNYkYvd4DWLK94FizEKHy3j406e0IEzW5gA0htevfIShcuZ8Y9U9GTLmMG6bUNIaLmxYK+Z9wJjsgcESU58GJm6aUNRIBroRVvKDso2+UCrBdGkhFcT2dXCCih7JtOqpCQIrdzABsxKqxILMgvh9l2pFP6KFEUqdMaTVaI7nLNPeWAoGLgEnG1IodC2hkZmoCcT958UMyRYOoycK9eBfO9QcDIgo84sxskVeAtberS/dN5flCpFSbezisBw8JV ansible-generated on Infra.rnd.com"
+      state: present

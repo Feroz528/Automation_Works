@@ -1,0 +1,12 @@
+---
+- hosts: server2.sf.com
+  user: test
+  sudo: yes
+  gather_facts: yes 
+  tasks:
+  - name: copying a template
+    template: src={{item}} dest=/tmp/abc/
+  with_items:
+     - ssh_con.j2
+     - ssh_config.j2
+    

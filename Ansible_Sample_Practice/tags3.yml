@@ -1,0 +1,9 @@
+---
+- hosts: server2.sf.com
+  user: test
+  sudo: yes
+  tasks:
+  - name: removing files
+    path: /home/test
+    command: rm -rf .html
+    

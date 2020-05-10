@@ -1,0 +1,15 @@
+---
+- hosts: server2.sf.com
+  user: test
+  sudo: yes
+  connection: ssh
+  tasks:
+  - name: copying files html
+    copy: src=index.html dest=/home/test/index.html
+    tags:
+     - copy_html
+  - name: copying files yml  
+    copy: src=tags.yml dest=/home/test/*.yml
+    tags:
+     - copy_yml
+ 

@@ -1,0 +1,12 @@
+---
+- hosts: server2.abc.com
+  user: test
+  sudo: yes 
+  tasks:
+  - name: stop tomcat
+    command: nohup /usr/local/tomcat/tomcat7/bin/catalina.sh stop
+  - name: copying war file
+    copy: src=/opt/test/WebProject.war
+          dest=/usr/local/tomcat/tomcat7/webapps/
+  - name: start tomcat
+    command: nohup /usr/local/tomcat/tomcat7/bin/catalina.sh start 

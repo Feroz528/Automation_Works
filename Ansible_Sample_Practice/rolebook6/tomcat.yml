@@ -1,0 +1,6 @@
+---
+- hosts: devils-group
+  user: test
+  become: yes
+  roles:
+    - tomcat

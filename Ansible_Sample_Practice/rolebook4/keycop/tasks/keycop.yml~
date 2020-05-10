@@ -1,0 +1,11 @@
+---
+- hosts: devils-group
+  user: test 
+  sudo: yes
+  connection: ssh
+  tasks:
+  - name: copying ssh key to host servers
+    authorized_key: user=test
+                    state=present
+                    key={{lookup('file','/home/test/.ssh/id_rsa.pub')}}
+ 

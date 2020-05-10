@@ -1,0 +1,4 @@
+---
+- name: restart httpd
+  service: name={{var1}} state=restarted
+

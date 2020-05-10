@@ -1,0 +1,8 @@
+---
+- hosts: server2.sf.com
+  user: test
+  sudo: yes
+  tasks:
+  - name: copying template
+    template: src=ssh_conf dest=/tmp/abc/
+

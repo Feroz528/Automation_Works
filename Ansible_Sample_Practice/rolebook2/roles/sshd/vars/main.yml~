@@ -1,0 +1,4 @@
+---
+ #tempvars to change state
+permit_root: 'no'
+passwd_auth: 'no'

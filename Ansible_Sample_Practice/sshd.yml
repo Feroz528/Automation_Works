@@ -1,0 +1,18 @@
+---
+- name: Secure the SSH Service
+  hosts: server2.sf.com
+  user: test
+  sudo: yes
+  vars:
+    var1: no
+  tasks: 
+  - name: copying sshd
+    template: src=sshd_config.j2 
+              dest=/etc/ssh/sshd_config
+              owner=root
+              group=root
+              mode="0777"
+              force=yes
+              sudo=yes 
+  - name: SSHD Restart
+    service: name=sshd state=restarted enabled=yes

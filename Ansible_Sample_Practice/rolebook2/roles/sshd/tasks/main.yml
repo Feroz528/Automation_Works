@@ -1,0 +1,14 @@
+---
+- name: changing root config
+  lineinfile: path=/etc/ssh/sshd_config
+              regexp='^#PermitRootLogin'
+              line='PermitRootLogin {{ permit_root }}'
+              state=present
+- name: changing passwd authentication
+  lineinfile: path=/etc/ssh/sshd_config
+              regexp='^#PasswordAuthentication'
+              line='PasswordAuthentication {{ passwd_auth }}'
+              state=present
+  notify:
+     - restart sshd 
+             

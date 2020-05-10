@@ -1,0 +1,12 @@
+---
+- hosts: server2.sf.com
+  user: test
+  sudo: yes
+  tasks:
+  - name: replacing lines
+    lineinfile: path=/tmp/abc/linefile
+                line='abc.com'
+                state=present  
+                insertbefore='www.'
+...
+                     

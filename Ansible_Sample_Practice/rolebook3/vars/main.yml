@@ -1,0 +1,11 @@
+---
+vars_prompt:
+- name: "{{ user }}"
+  prompt: "Enter Username"
+  private: yes
+- name: "{{ pass }}"
+  prompt: "Enter Password"
+  private: yes
+  encrypt: "sha512_crypt"
+  confirm: yes
+  salt_size: 7

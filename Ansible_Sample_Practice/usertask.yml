@@ -1,0 +1,21 @@
+---
+- hosts: devils-group
+  user: test
+  sudo: yes
+  gather_facts: no
+  vars:
+    uname: 'amirkhan'
+    upasswd: '$5$Kjg.dprTo1btxerq$xz0/kBc/zENs2G4m4u7V6NUeCpk4kyO9Ra/jMpcfzX7'
+  tasks:
+  - name: creating users
+    user: name={{uname}}
+          password={{upasswd}}
+          shell=/bin/bash
+          generate_ssh_key=yes
+          state=present
+  - name: copying ssh key
+    authorized_key: user={{uname}}
+                    key={{lookup('file','/home/test/.ssh/id_rsa.pub')}}
+                    path=/home/{{uname}}/.ssh/authorized_keys
+                    state=present
+                                  
