@@ -1,0 +1,41 @@
+
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            environment {
+                def branch_name="develop"
+                def git_url="https://bitbucket.org/traininguidesiner/oes-angular.git"
+            }
+            steps {
+            // Get some code from a Git repository
+               git branch: "${env.branch_name}", url: "${env.git_url}"
+            // Run build step.
+                sh "npm install"
+                sh "ng build"
+            }
+    }
+        stage('Deploy')
+        {
+            environment {
+                 def build_path="/var/lib/jenkins/workspace/BootAngular/dist/OES-angular"
+                 def dep_path="/opt/tomcat8/webapps/ROOT"
+                 }
+                steps {
+                    sh "sudo rm -rf ${env.dep_path}/* "
+                    sh "sudo cp -rpf ${env.build_path}/* ${env.dep_path}"
+                } 
+        }
+        
+        stage('Restart Tom')
+        {
+            environment {
+                 def catalina="/opt/tomcat8/bin/catalina.sh"
+                 }
+                steps {
+                    sh "sudo ${env.catalina} stop"
+                    sh "sudo ${env.catalina} start"
+                } 
+        }
+    }
+}
