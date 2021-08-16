@@ -1,0 +1,43 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            environment {
+                def branch_name="master"
+                def git_url="https://iamjagadeesh@bitbucket.org/iamjagadeesh/online-compiler-angular-frontend.git"
+            }
+            steps {
+            // Get some code from a Git repository
+               git branch: "${env.branch_name}", url: "${env.git_url}"
+            // Run build step.
+            bat "npm install"
+            bat "npm run ng  -- build"
+            }
+    }
+    
+    stage('Deploy')
+        {
+            environment {
+                 def build_path="('C:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\Jenkins\\.jenkins\\workspace\\AngularJS\\dist\\Online-Compiler\\')"
+                 def dep_path="('C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\webapps\\ROOT\\')"
+                 }
+                steps {
+				    bat "C:\\Users\\jagadeesh\\deploy.bat"
+                } 
+        }
+    
+        stage('Restart Tom')
+        {
+            environment {
+                 def catalina="('C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\bin\\catalina.bat')"
+                 }
+                steps {
+                    bat "CALL ('C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\bin\\shutdown.bat')"
+                    bat "CALL ('C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\bin\\startup.bat')"
+                    
+                } 
+        }
+        
+    }
+    
+}
